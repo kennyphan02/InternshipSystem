@@ -42,6 +42,6 @@ public class Organization {
         return;
     }
     public String toString(){
-        
+        return "";
     }
 }
