@@ -1,9 +1,12 @@
 public class Experience {
     private String title;
     private ArrayList<String> description;
-    public Experience(String title, ArrayList<String> description){
+    public Experience(String title){
         this.title = title;
-        this.description = description;
+        description = new ArrayList<String>();
+    }
+    public void addDescription(String description){
+        return;
     }
     public String toString(){
         return "";
