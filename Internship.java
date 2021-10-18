@@ -1,4 +1,6 @@
+
 public class Internship {
+
     private String job;
     private String degree;
     private String partTime;
@@ -10,6 +12,7 @@ public class Internship {
     private Organization organization;
     private String experience;
     private Internship internship;
+
     public Internship(String job, String degree, String partTime, String fullTime, 
         String remote, String inPerson, int pay, int hours, Organization organization, 
         String Experience, Internship internship) {
@@ -25,7 +28,9 @@ public class Internship {
             this.experience = experience;
             this.internship = internship;
         }
+
     public String toString() {
         return "";
     }
+    
 }

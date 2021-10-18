@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Student {
+
     private String user;
     private String pass;
     private String email;
@@ -9,7 +12,9 @@ public class Student {
     private String language;
     private ArrayList<Internship> bookmarks;
     private ArrayList<Review> studentReviews;
-    public Student(String user, String pass, String email, String birthday, String country, Resume resume, String college, String language){
+
+    public Student(String user, String pass, String email, String birthday, 
+            String country, Resume resume, String college, String language) {
         this.user = user;
         this.pass = pass;
         this.email = email;
@@ -19,33 +24,43 @@ public class Student {
         this.college = college;
         this.language = language;
         bookmarks = new ArrayList<Internship>();
-        studentReviews = new ArrayList<studentReviews>();
+        studentReviews = new ArrayList<Review>();
     }
-    public boolean passwordCondition(){
+
+    public boolean passwordCondition() {
         return false;
     }
-    public void bookmarkInternship(){
+
+    public void bookmarkInternship() {
         return;
     }
-    public void removeBookmark(){
+
+    public void removeBookmark() {
         return;
     }
-    public void displayBookmarks(){
+
+    public void displayBookmarks() {
         return;
     }
-    public void addInternshipReview(Internship internship, int rate, String comment){
+
+    public void addInternshipReview(Internship internship, int rate, String comment) {
         return;
     }
-    public void removeInternshipReview(Internship internship){
+
+    public void removeInternshipReview(Internship internship) {
         return;
     }
-    public void applyInternship(Internship internship){
+
+    public void applyInternship(Internship internship) {
         return;
     }
-    public void createStudentProfile(){
+
+    public void createStudentProfile() {
         return;
     }
-    public String toString(){
+
+    public String toString() {
         return "";
     }
+
 }

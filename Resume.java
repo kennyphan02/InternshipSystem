@@ -1,4 +1,5 @@
 public class Resume {
+
     private String firstName;
     private String lastName;
     private String profession;
@@ -6,8 +7,10 @@ public class Resume {
     private Experience experience;
     private Education education;
     private String language;
-    public Resume(String firstName, String lastName, String profession, String email, Experience experience, Education education, String language){
-        this.firstName = firstname;
+
+    public Resume(String firstName, String lastName, String profession, 
+            String email, Experience experience, Education education, String language) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.profession = profession;
         this.email = email;
@@ -15,7 +18,7 @@ public class Resume {
         this.education = education;
         this.language = language;
     }
-    public String toString(){
+    public String toString() {
         return "";
     }
     
