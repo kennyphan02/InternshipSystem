@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "user": "Kenny Phan",
+        "pass": "HawaiiIsCool123",
+        "email": "kennyphan@gmail.com",
+        "birthday": "08/07/2002",
+        "country": "USA",
+        "resume": 1,
+        "college": "University of South Carolina",
+        "language": "English",
+        "InternshipId": 2,
+        "studentReviewsId": 4  
+    },{
+        "id": 2,
+        "user": "Thomas Vu",
+        "pass": "!mtv&vCMFdlu",
+        "email": "thomasvu@email.com",
+        "birthday": "02/12/2001",
+        "country": "USA",
+        "resume": 2,
+        "college": "University of South Carolina",
+        "language": "English",
+        "InternshipId": [1, 2],
+        "studentReviewsId": [1, 5]  
+    },{
+        "id": 3,
+        "user": "Daniel Nguyen",
+        "pass": "afjsAKLUJAF",
+        "email": "dannyn4@email.com",
+        "birthday": "10/03/2002",
+        "country": "USA",
+        "resume": 3,
+        "college": "University of South Carolina",
+        "language": "English",
+        "InternshipId": 2,
+        "studentReviewsId": 3 
+    },{
+        "id": 4,
+        "user": "Danai Angelidis",
+        "pass": "beepBoopBap456!!!!!!!!!",
+        "email": "danaiagg@email.com",
+        "birthday": "06/27/2002",
+        "country": "Greece",
+        "resume": 4,
+        "college": "University of South Carolina",
+        "language": "English",
+        "InternshipId": [1, 2],
+        "studentReviewsId": 2 
+    }
+]
