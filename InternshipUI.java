@@ -1,59 +1,70 @@
 import java.util.Scanner;
 
 public class InternshipUI {
-    private String[] mainMenuOptions = {"Search Internship","Login","Create an Account"};
     private Scanner scanner;
     private Internship internship;
 
     InternshipUI()  {
         scanner = new Scanner(System.in);
-        internship = new Internship();
     }
+
     public void run() {
-        Scanner keyboard = new Scanner(System.in);
-        int option = keyboard.nextInt();
-        boolean undecided = true;
-        while (undecided)   {
-            if (option == 1)    {
-                undecided = false;
-                searchInternship();
-            } else if (option == 2) {
-                undecided = false;
-                login();
-            } else if (option == 3) {
-                undecided = false;
-                createAcc();
-            } else  {
-                System.out.println("Error: incorrect input");
-                }
+        displayMainMenu();
+        int userInput = getUserInput();
+        if(userInput == 1){
+
+        } else if(userInput == 2){
+            login();
+
+        } else if(userInput == 3){
+            createAccount();
+        } else {
+            
         }
     }
-    /**
-     * Code based on library example
-     */
+    
     private void displayMainMenu()  {
         System.out.println("--------Internship System--------");
         System.out.println("\nInput a number based off the choices below");
-        for(int i=0; i< mainMenuOptions.length; i++) {
-			System.out.println((i+1) + ". " + mainMenuOptions[i]);
-		}
-		System.out.println("\n");
+        System.out.println("1. Search Internship\n");
+        System.out.println("2. Login\n");
+        System.out.println("3. Create an Account\n");
     }
 
     private void searchInternship()   {
-
-    }
-
-    private void login() {
         
     }
 
-    private void createAcc()    {
+    private void login() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("--------Internship System--------");
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.println("");
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
 
     }
 
+    private void createAccount(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("--------Internship System--------");
+        System.out.println("Are you a student or an organization? Input 1 for student or 2 for organization:  ");
+        int userInput = getUserInput();
+
+
+    }
+
+    private int getUserInput(){
+        String input = scanner.nextLine();
+        int userInput = Integer.parseInt(input);
+        return userInput;
+    }
+
     public static void main(String[] args)  {
-        InternshipUI main = new InternshipUI();
-        main.run();
+        InternshipUI driver = new InternshipUI();
+        driver.run();
     }
 }
