@@ -15,9 +15,7 @@ public class Internship {
     private Internship internship;
     private ArrayList<Review> review;
 
-    public Internship(String job, String degree, String partTime, String fullTime, 
-        String remote, String inPerson, int pay, int hours, Organization organization, 
-        String Experience, String review, String rating) {
+    public Internship() {
             this.job = job;
             this.degree = degree;
             this.partTime = partTime;
