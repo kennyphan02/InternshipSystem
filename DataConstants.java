@@ -1,6 +1,7 @@
 
 public class DataConstants {
 
+    protected static final String USER_FILE_NAME = "src/users.json";
     protected static final String USER_ID = "user";
     protected static final String PASSWORD = "pass";
     protected static final String EMAIL = "email";
