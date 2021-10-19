@@ -5,10 +5,6 @@ public class InternshipList {
     private static InternshipList internshipList;
     private ArrayList<Internship> internships;
 
-    private static String internshipList() {
-        return null;
-    }
-
     public InternshipList getinstance() { 
         return null;
     }

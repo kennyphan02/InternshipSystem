@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Education {
 
     private String degree;
     private ArrayList<String> description;
+    private Scanner scanner;
 
     /**
      * Default constructor that initalizes the degree and description/
@@ -11,13 +13,13 @@ public class Education {
      */
     public Education(String degree) {
         this.degree = degree;
-        description = new ArrayList<String>();
+        this.description = new ArrayList<String>();
+        scanner = new Scanner(System.in);
     }
-
     public void addDescription(String description) {
-        return;
+        this.description.add(description);
     }
-
+    
     public String toString() {
         return "";
     }
