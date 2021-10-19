@@ -1,0 +1,29 @@
+[
+    {
+        "UUID":"",
+        "job":"",
+        "degree":"",
+        "partTime":"",
+        "fullTime":"",
+        "remote":"",
+        "inPerson":"",
+        "pay":0,
+        "hours":0,
+        "organization":"",
+        "experience":"",
+        "review":""
+    },{
+        "UUID":"",
+        "job":"",
+        "degree":"",
+        "partTime":"",
+        "fullTime":"",
+        "remote":"",
+        "inPerson":"",
+        "pay":0,
+        "hours":0,
+        "organization":"",
+        "experience":"",
+        "review":""
+    }
+]
