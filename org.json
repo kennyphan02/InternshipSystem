@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "UUID":"",
         "user": "Microsoft",
         "pass": "BillGates<3",
         "email": "microsoft@microsoft.com",
@@ -10,7 +10,7 @@
         "internshipId": 2,
         "internshipReviewsId": 3
     },{
-        "id": 2,
+        "UUID":"",
         "user": "Amazon",
         "pass": "Bezosmademedoit87",
         "email": "amazon@hotmail.com",
