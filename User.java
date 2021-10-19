@@ -13,5 +13,5 @@ public abstract class User {
     public ArrayList<Internship> searchInternships(ArrayList<Internship> internships, Internship filters) {
         return internships;
     }
-    
+
 }

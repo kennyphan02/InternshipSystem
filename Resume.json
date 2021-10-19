@@ -1,23 +1,43 @@
 [
     {
         "UUID":"",
-        "firstName":"",
-        "lastName":"",
-        "profession":"",
-        "email":"",
-        "skills":"",
-        "experience":"",
-        "education":"",
-        "language":""
+       "firstName":"Kenny",
+        "lastName":"Phan", 
+        "profession": "Student",
+        "email:": "kennyphan@gmail.com",
+        "skills": ["Java", "HTML", "C++"],
+        "experience": ["Creator of Java as a language", "Interned for PayPal in finance and accounting"],
+        "education": ["High School", "Student at University of South Carolina"],
+        "language": ["English", "French"]
     },{
         "UUID":"",
-        "firstName":"",
-        "lastName":"",
-        "profession":"",
-        "email":"",
-        "skills":"",
-        "experience":"",
-        "education":"",
-        "language":""
+        "firstName":"Thomas",
+        "lastName":"Vu",
+        "profession": "Student",
+        "email:": "thomasvu@email.com",
+        "skills": ["Java", "C++", "Python"],
+        "experience": ["Intern software engineer at Citrix"],
+        "education": ["High School", "Student at University of South Carolina"],
+        "language": ["English", "Russian", "Spanish"]
+    },{
+        "UUID":"",
+        "firstName":"Danny",
+        "lastName":"Nguyen",
+        "profession": "Student",
+        "email:": "dannyn4@email.com",
+        "skills": ["Java", "bindary code"],
+        "experience": ["Analyst at Goldman Sachs", "Interned as a journalist at the Dow Jones News Fund"],
+        "education": ["High School", "Student at University of South Carolina"],
+        "language": ["English", "Swahili", "Arabic"]
+    },{
+        "UUID":"",
+        "firstName":"Danai",
+        "lastName":"Angelidis",
+        "profession": "Student",
+        "email:": "danaiagg@email.com",
+        "skills": ["Java", "HTML", "JustBasic"],
+        "experience": ["Aerospace intern at Brooke Owens Fellowship"],
+        "education": ["High School", "Student at University of South Carolina"],
+        "language": ["English", "Greek", "French", "Spanish"]
     }
 ]
