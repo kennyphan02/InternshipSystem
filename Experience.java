@@ -11,7 +11,7 @@ public class Experience {
      * Default constructor that initalizes the degree and description. scanner is initalized for future usages.
      * @param title type string
      */
-    public Experience(String title) {
+    public Experience() {
         this.titles = new ArrayList<String>();
         this.descriptions = new ArrayList<String>();
         scanner = new Scanner(System.in);
