@@ -11,7 +11,7 @@ public class InternshipUI {
 
     public void run() {
         displayMainMenu();
-        int userInput = getUserInput();
+        int userInput = internshipSystem.getUserInput();
         if(userInput == 1){
 
         } else if(userInput == 2){
@@ -38,27 +38,12 @@ public class InternshipUI {
     }
 
     private void login() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
         internshipSystem.login();
     }
 
     private void createAccount(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println("--------Internship System--------");
-        System.out.println("Are you a student or an organization? Input 1 for student or 2 for organization:  ");
-        int userInput = getUserInput();
-
-
+        internshipSystem.createAccount();
     }
-
-    private int getUserInput(){
-        String input = scanner.nextLine();
-        int userInput = Integer.parseInt(input);
-        return userInput;
-    }
-
     public static void main(String[] args)  {
         InternshipUI driver = new InternshipUI();
         driver.run();
