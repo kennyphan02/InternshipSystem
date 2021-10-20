@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class User {
+public class User {
 
     public ArrayList<Internship> searchInternships(ArrayList<Internship> internships) {
         return internships;
