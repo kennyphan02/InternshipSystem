@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 public class InternshipUI {
     private Scanner scanner;
-    private Internship internship;
+    private InternshipSystem internshipSystem;
 
     InternshipUI()  {
         scanner = new Scanner(System.in);
+        internshipSystem = new InternshipSystem();
     }
 
     public void run() {
@@ -39,7 +40,8 @@ public class InternshipUI {
     private void login() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("--------Internship System--------");
+        System.out.println("--------Internship System--------")
+
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
         System.out.println("");

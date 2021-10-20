@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Organization {
+public class Organization extends User{
     private String user;
     private String pass;
     private String email;

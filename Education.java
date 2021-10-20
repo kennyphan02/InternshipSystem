@@ -9,7 +9,7 @@ public class Education {
 
     /**
      * Default constructor that initalizes the degree and description. scanner is initalized for future usages.
-     * @param degree
+     * @param degree type string
      */
     public Education(String degree) {
         this.degree = degree;
@@ -19,12 +19,15 @@ public class Education {
 
     /**
      * Adds a description to the arraylist of descriptions. The user may want to add multiple descriptions on the education section of their resume. 
-     * @param description 
+     * @param description type String
      */
     public void addDescription(String description) {
         this.description.add(description);
     }
 
+    /**
+     * To be implemented
+     */
     public String toString() {
         return "";
     }

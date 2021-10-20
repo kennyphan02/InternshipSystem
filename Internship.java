@@ -11,7 +11,7 @@ public class Internship {
     private int pay;
     private int hours;
     private Organization organization;
-    private String experience;
+    private Experience experience;
     private Internship internship;
     private ArrayList<Review> review;
 
