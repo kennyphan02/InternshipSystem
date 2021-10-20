@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Experience {
 
-    private String title;
-    private ArrayList<String> description;
+    private ArrayList<String> titles;
+    private ArrayList<String> descriptions;
     private Scanner scanner;
     
     /**
@@ -12,8 +12,8 @@ public class Experience {
      * @param title type string
      */
     public Experience(String title) {
-        this.title = title;
-        this.description = new ArrayList<String>();
+        this.titles = new ArrayList<String>();
+        this.descriptions = new ArrayList<String>();
         scanner = new Scanner(System.in);
 
     }
@@ -24,8 +24,14 @@ public class Experience {
      */
     public void addDescription(String description) 
     {
-        this.description.add(description);
+        this.descriptions.add(description);
     }
+
+    public void addTitle(String title) 
+    {
+        this.titles.add(title);
+    }
+
 
     /**
      * to be implemented

@@ -64,8 +64,14 @@ public class InternshipSystem {
             System.out.println("Email: " + email);
             System.out.println("");
             System.out.println("Input experience. Enter 1 to stop adding experiences");
+            System.out.println("");
+            System.out.println("Title: ");
             boolean count = true;
+            Experience experience = new Experience();
+            
             while(count){
+                System.out.print("Title: ");
+                String title = scanner.nextLine();
 
             
             }
