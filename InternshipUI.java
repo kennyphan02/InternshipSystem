@@ -33,8 +33,7 @@ public class InternshipUI {
     }
 
     private void searchInternship()   {
-        
-
+        // internshipSystem.searchInternship();
     }
 
     private void login() {
