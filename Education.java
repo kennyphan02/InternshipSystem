@@ -3,17 +3,17 @@ import java.util.Scanner;
 
 public class Education {
 
-    private String degree;
-    private ArrayList<String> description;
+    private ArrayList<String> degrees;
+    private ArrayList<String> descriptions;
     private Scanner scanner;
 
     /**
      * Default constructor that initalizes the degree and description. scanner is initalized for future usages.
      * @param degree type string
      */
-    public Education(String degree) {
-        this.degree = degree;
-        this.description = new ArrayList<String>();
+    public Education() {
+        this.degrees = new ArrayList<String>();
+        this.descriptions = new ArrayList<String>();
         scanner = new Scanner(System.in);
     }
 
@@ -22,8 +22,13 @@ public class Education {
      * @param description type String
      */
     public void addDescription(String description) {
-        this.description.add(description);
+        this.descriptions.add(description);
     }
+
+    public void addDegree(String degree) {
+        this.degrees.add(degree);
+    }
+
 
     /**
      * To be implemented

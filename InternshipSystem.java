@@ -13,7 +13,9 @@ public class InternshipSystem {
     private String lastName;
     private String profession;
     private String college;
+    private String language;
     private Experience experience;
+    private Education education;
     private Resume resume;
 
 
@@ -22,6 +24,7 @@ public class InternshipSystem {
         // userList = UserList.getInstance();
         scanner = new Scanner(System.in);
         experience = new Experience();
+        education = new Education();
     }
     
     public void login(){
@@ -55,9 +58,12 @@ public class InternshipSystem {
             birthday = scanner.nextLine();
             System.out.print("Input country: ");
             country = scanner.nextLine();
+            System.out.print("Input language: ");
+            language = scanner.nextLine();
             System.out.println("");
             createStudentProfile();
-            createResume();    
+            createResume();  
+            Student student = new Student(username, password, email, birthday, country, resume, college, language);
         }
     }
 
@@ -88,6 +94,9 @@ public class InternshipSystem {
         System.out.println("");
         createExperiences();
         createEducation();
+        resume = new Resume(firstName, lastName, profession, email, experience, education, language);
+
+
     }
 
     private void createExperiences(){
@@ -98,7 +107,7 @@ public class InternshipSystem {
             System.out.print("Input title:  ");
             String title = scanner.nextLine();
             experience.addTitle(title);
-            System.out.print("Input description:");
+            System.out.print("Input description: ");
             String description = scanner.nextLine();
             experience.addDescription(description);
             System.out.print("Input quit? type quit to quit or no to keep inputting experiences: ");
@@ -113,7 +122,24 @@ public class InternshipSystem {
 
     private void createEducation(){
         System.out.println("");
-
+        System.out.println("Input education. Enter \"quit\" before adding an education to quit");
+        System.out.println("");
+        boolean count = true;
+        while(count){
+            System.out.print("Input degree:  ");
+            String degree = scanner.nextLine();
+            education.addDegree(degree);
+            System.out.print("Input description: ");
+            String description = scanner.nextLine();
+            education.addDescription(description);
+            System.out.print("Input quit? type quit to quit or no to keep inputting education: ");
+            String quit = scanner.nextLine();
+            if(quit.equals("quit")){
+                count = false;
+            } else if(quit.equals("no")){
+                continue;
+            }
+        }
     }
 
     public int getUserInput(){
