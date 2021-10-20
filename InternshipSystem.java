@@ -1,18 +1,25 @@
+import java.util.Scanner;
+
 public class InternshipSystem {
-    private Organization organization;
-    private Student student;
-    private Internship internship;
     private InternshipList internshipList;
-    private User user;
     private UserList userList;
-    public InternshipSystem(Organization organization, Student student, Internship internship, InternshipList internshipList, User user, UserList userList){
-        this.organizataion = organization;
-        this.student = student;
-        this.internship = internship;
-        this.internshipList = internshipList;
-        this.user = user;
-        this.userList = userList;
+    private Scanner scanner;
+
+    public InternshipSystem(){
+        // internshipList = InternshipList.getInstance();
+        // userList = UserList.getInstance();
+        scanner = new Scanner(System.in);
     }
+    
+    public void login(){
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.println("");
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+
+    }
+
 
 
 

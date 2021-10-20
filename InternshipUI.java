@@ -40,14 +40,7 @@ public class InternshipUI {
     private void login() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("--------Internship System--------")
-
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.println("");
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
-
+        internshipSystem.login();
     }
 
     private void createAccount(){
