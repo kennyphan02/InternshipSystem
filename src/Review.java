@@ -1,5 +1,8 @@
+import java.util.UUID;
+
 public class Review {
 
+    private UUID id;
     private String title;
     private String comment;
     private int rating;

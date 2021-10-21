@@ -1,7 +1,9 @@
+import java.util.UUID;
 import java.util.ArrayList;
 
 public class Internship {
 
+    private UUID id;
     private String job;
     private String degree;
     private String partTime;
@@ -14,6 +16,7 @@ public class Internship {
     private Experience experience;
     private Internship internship;
     private ArrayList<Review> review;
+    private ArrayList<Student> applicants;
 
     public Internship() {
             this.job = job;
@@ -26,6 +29,7 @@ public class Internship {
             this.hours = hours;
             this.organization = organization;
             this.experience = experience;
+            this.applicants = applicants;
         }
     public Internship compareFilters(Internship internship) {
         return internship;

@@ -1,7 +1,9 @@
+import java.util.UUID;
 import java.util.ArrayList;
 
 public class Student extends User {
 
+    private UUID id;
     private String user;
     private String pass;
     private String email;
