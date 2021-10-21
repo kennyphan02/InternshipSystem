@@ -13,6 +13,11 @@ public class DataConstants {
     protected static final String INTERNSHIP_EXPERIENCE = "experience";
     protected static final String INTERNSHIP_REVIEWS = "reviews";
 
-    
+    protected static final String INTERNSHIP_REVIEW_FILE_NAME = "../data/internshipReviews.json";
+    protected static final String STUDENT_REVIEW_FILE_NAME = "../data/studentReviews.json";
+    protected static final String REVIEW_UUID = "UUID";
+    protected static final String REVIEW_TITLE = "title";
+    protected static final String REVIEW_COMMENT = "comment";
+    protected static final String REVIEW_RATING = "rating";
 
 }
