@@ -7,7 +7,7 @@
         "inperson": true,
         "pay": "TBD",
         "hours": 40,
-        "organizationId": 2,
+        "organizationUUId": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
         "reviewId": 2
     },{
@@ -18,7 +18,7 @@
         "inperson": false,
         "pay": "TBD",
         "hours": 10,
-        "organizationId": 2,
+        "organizationUUId": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
         "reviewId": 1
     },{
@@ -29,7 +29,7 @@
         "inperson": true,
         "pay": "$20/hr",
         "hours": 25,
-        "organizationId": 1,
+        "organizationId": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
         "experience": ["One year of programming experience in an object-oriented language."],
         "reviewId": 3
     }
