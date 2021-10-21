@@ -3,10 +3,14 @@ import java.util.Scanner;
 public class InternshipUI {
     private Scanner scanner;
     private InternshipSystem internshipSystem;
+    private int studentMenu;
+    private int organizationMenu;
 
     InternshipUI()  {
         scanner = new Scanner(System.in);
         internshipSystem = new InternshipSystem();
+        studentMenu = 0;
+        organizationMenu = 0;
     }
 
     public void run() {
@@ -19,6 +23,7 @@ public class InternshipUI {
 
         } else if(userInput == 3){
             createAccount();
+
         } else {
             
         }
