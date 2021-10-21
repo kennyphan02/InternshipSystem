@@ -1,4 +1,5 @@
 import java.util.UUID;
+import java.util.ArrayList;
 
 public class Resume {
 
@@ -9,10 +10,10 @@ public class Resume {
     private String email;
     private Experience experience;
     private Education education;
-    private String[] language;
+    private ArrayList<String> language;
 
     public Resume(String firstName, String lastName, String profession, 
-            String email, Experience experience, Education education, String[] language) {
+            String email, Experience experience, Education education, ArrayList<String> language) {
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -23,7 +24,7 @@ public class Resume {
         this.language = language;
     }
     public Resume(UUID id, String firstName, String lastName, String profession, 
-            String email, Experience experience, Education education, String[] language) {
+            String email, Experience experience, Education education, ArrayList<String> language) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -54,7 +55,7 @@ public class Resume {
     public Education geteducation() {
         return education;
     }
-    public String[] getlanguage() {
+    public ArrayList<String> getlanguage() {
         return language;
     }
 

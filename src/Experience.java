@@ -40,4 +40,13 @@ public class Experience {
         return "";
     }
     
+    public ArrayList<String> gettitles() {
+        return titles;
+    }
+    public ArrayList<String> getdescriptions() {
+        return descriptions;
+    }
+    public Scanner getscanner() {
+        return scanner;
+    }
 }
