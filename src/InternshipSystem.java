@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class InternshipSystem {
     private InternshipList internshipList;
@@ -13,7 +14,7 @@ public class InternshipSystem {
     private String lastName;
     private String profession;
     private String college;
-    private String language;
+    private ArrayList<String> language;
     private Experience experience;
     private Education education;
     private Resume resume;
@@ -25,6 +26,7 @@ public class InternshipSystem {
         scanner = new Scanner(System.in);
         experience = new Experience();
         education = new Education();
+        language = new ArrayList<String>();
     }
     
     public void login(){
@@ -58,8 +60,7 @@ public class InternshipSystem {
             birthday = scanner.nextLine();
             System.out.print("Input country: ");
             country = scanner.nextLine();
-            System.out.print("Input language: ");
-            language = scanner.nextLine();
+            createLanguages();
             System.out.println("");
             createStudentProfile();
             createResume();  
@@ -95,8 +96,24 @@ public class InternshipSystem {
         createExperiences();
         createEducation();
         resume = new Resume(firstName, lastName, profession, email, experience, education, language);
+    }
 
-
+    private void createLanguages(){
+        System.out.println("Input languages that you speak. Enter \"quit\" before adding an languages to quit");
+        System.out.println("");
+        boolean count = true;
+        while(count){
+            System.out.print("Input language: ");
+            String languageUserInput = scanner.nextLine();
+            language.add(languageUserInput);
+            System.out.print("Input quit? type quit to quit or no to keep inputting experiences: ");
+            String quit = scanner.nextLine();
+            if(quit.equals("quit")){
+                count = false;
+            } else if(quit.equals("no")){
+                continue;
+            }
+        }
     }
 
     private void createExperiences(){
