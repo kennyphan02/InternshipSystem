@@ -1,36 +1,36 @@
 [
     {
-        "UUID":"",
+        "UUID":"3d523283-a353-41ae-b702-488cfb6917d5",
         "job": "Software Development Engineer Internship",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": true,
         "inperson": true,
         "pay": "TBD",
         "hours": 40,
-        "organizationId": 2,
+        "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
-        "reviewId": 2
+        "reviewUUID": "d7ccec7d-d47f-479d-b445-d27ccbc03a42"
     },{
-        "UUID":"",
+        "UUID":"a33421b9-e82a-465c-8aa5-a85b8de7db24",
         "job": "Amazon Operations Finance Rotational Program Internship",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
         "inperson": false,
         "pay": "TBD",
         "hours": 10,
-        "organizationId": 2,
+        "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
-        "reviewId": 1
+        "reviewUUID": "46a4ef90-a7ed-4281-8154-99ffb426fd98"
     },{
-        "UUID":"",
+        "UUID":"230d04f2-389b-484b-bb64-db73b08b398a",
         "job": "Site Reliability Engineering: Summer Intern Opportunities",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
         "inperson": true,
         "pay": "$20/hr",
         "hours": 25,
-        "organizationId": 1,
+        "organizationID": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
         "experience": ["One year of programming experience in an object-oriented language."],
-        "reviewId": 3
+        "reviewUUID": "2ddc2e1f-795f-45c4-9202-8ba6a28c8082"
     }
 ]
