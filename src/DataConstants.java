@@ -1,14 +1,18 @@
 
 public class DataConstants {
 
-    protected static final String USER_FILE_NAME = "src/users.json";
-    protected static final String USER_ID = "1";
-    protected static final String PASSWORD = "pass";
-    protected static final String EMAIL = "email";
-    protected static final String BIRTH_DATE = "birthday";
-    protected static final String COUNTRY = "country";
-    protected static final String RESUME = "resume";
-    protected static final String COLLEGE_EDUCATION = "college";
-    protected static final String LANGUAGE = "language";
+    protected static final String INTERNSHIP_FILE_NAME = "../data/internship.json";
+    protected static final String INTERNSHIP_UUID = "UUID";
+    protected static final String INTERNSHIP_JOB = "job";
+    protected static final String INTERNSHIP_DEGREE = "degree";
+    protected static final String INTERNSHIP_FULL_TIME = "fullTime";
+    protected static final String INTERNSHIP_IN_PERSON = "inPerson";
+    protected static final String INTERNSHIP_PAY = "pay";
+    protected static final String INTERNSHIP_HOURS = "hours";
+    protected static final String INTERNSHIP_ORG_ID = "organizationUUID";
+    protected static final String INTERNSHIP_EXPERIENCE = "experience";
+    protected static final String INTERNSHIP_REVIEWS = "reviews";
+
+    
 
 }
