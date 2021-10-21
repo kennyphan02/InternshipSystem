@@ -14,24 +14,28 @@ public class InternshipUI {
     }
 
     public void run() {
-        displayMainMenu();
-        int userInput = internshipSystem.getUserInput();
-        if(userInput == 1){
+        while(true){
+            if(studentMenu == 0 && organizationMenu == 0){
+                displayMainMenu();
+            }
+            int userInput = internshipSystem.getUserInput();
+            if(userInput == 1){
+                // searchInternship();
+            } else if(userInput == 2){
+                login();
+            } else if(userInput == 3){
+                createAccount();
+                studentMenu = 1;
+            } else {
+                System.out.println("Invalid Option");
+            }
+            if(studentMenu == 1){
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                displayStudentMenu();
+                inputUserOptions();
 
-        } else if(userInput == 2){
-            login();
-
-        } else if(userInput == 3){
-            createAccount();
-            studentMenu = 1;
-        } else {
-            
-        }
-        if(studentMenu == 1){
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-            displayStudentMenu();
-            String userInput = scanner.nextLine();
+            }
         }
     }
     
@@ -53,6 +57,9 @@ public class InternshipUI {
         System.out.println("5. Edit student profile");
         System.out.println("6. Pending Internships");
         System.out.println("7. Logout");
+    }
+    private void inputUserOptions(){
+        
     }
 
     private void searchInternship()   {
