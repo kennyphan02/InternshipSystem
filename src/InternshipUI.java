@@ -18,12 +18,12 @@ public class InternshipUI {
             if(studentMenu == 0 && organizationMenu == 0){
                 displayMainMenu();
             }
-            int userInput = internshipSystem.getUserInput();
-            if(userInput == 1){
+            int guestInput = internshipSystem.getUserInput();
+            if(guestInput == 1){
                 // searchInternship();
-            } else if(userInput == 2){
+            } else if(guestInput == 2){
                 login();
-            } else if(userInput == 3){
+            } else if(guestInput == 3){
                 createAccount();
                 studentMenu = 1;
             } else {
@@ -34,7 +34,6 @@ public class InternshipUI {
                 System.out.flush();
                 displayStudentMenu();
                 inputUserOptions();
-
             }
         }
     }
@@ -59,6 +58,7 @@ public class InternshipUI {
         System.out.println("7. Logout");
     }
     private void inputUserOptions(){
+        String studentInput = scanner.nextLine();
         
     }
 
