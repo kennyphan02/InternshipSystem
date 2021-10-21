@@ -31,6 +31,7 @@ public class InternshipUI {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             displayStudentMenu();
+            String userInput = scanner.nextLine();
         }
     }
     
@@ -52,7 +53,6 @@ public class InternshipUI {
         System.out.println("5. Edit student profile");
         System.out.println("6. Pending Internships");
         System.out.println("7. Logout");
-        String userInput = scanner.nextLine();
     }
 
     private void searchInternship()   {
