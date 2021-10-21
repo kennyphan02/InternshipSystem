@@ -11,7 +11,7 @@ public class Student extends User {
     private String country;
     private Resume resume;
     private String college;
-    private String language;
+    private ArrayList<String> language;
     private ArrayList<Internship> bookmarks;
     private ArrayList<Review> reviews;
 
@@ -124,7 +124,7 @@ public class Student extends User {
         return college;
     }
 
-    public String getLanguage() {
+    public ArrayList<String> getLanguage() {
         return language;
     }
 
