@@ -10,7 +10,7 @@
         "college": "University of South Carolina",
         "language": "English",
         "InternshipUUID": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
-        "studentReviewsUUID": 4  
+        "studentReviewsUUID": "2fb1e662-44b4-4961-bf66-c1e2ced104dd"  
     },{
         "UUID":"aeca4c82-e986-4f04-a08a-34328fd8d5d1",
         "user": "Thomas Vu",
@@ -22,7 +22,7 @@
         "college": "University of South Carolina",
         "language": "English",
         "InternshipUUID": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
-        "studentReviewsUUID": [1, 5]  
+        "studentReviewsUUID": ["e413a400-4cf4-48ab-baaf-b2cf77535b87", "54167f8e-2246-40fb-b5ae-7f52aa0fc89f"]  
     },{
         "UUID":"2e8bc9a2-2a69-498d-b12a-28b4df5343c4",
         "user": "Daniel Nguyen",
@@ -34,7 +34,7 @@
         "college": "University of South Carolina",
         "language": "English",
         "InternshipUUID": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
-        "studentReviewsUUID": 3 
+        "studentReviewsUUID": "54f1c5a4-fd44-409f-83a4-dd086ec1f608" 
     },{
         "UUID":"9e2a6a20-0ed4-4e21-bfcd-0db2c302eee4",
         "user": "Danai Angelidis",
@@ -46,6 +46,6 @@
         "college": "University of South Carolina",
         "language": "English",
         "InternshipUUID": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
-        "studentReviewsUUID": 2 
+        "studentReviewsUUID": "4aceebbe-e353-43de-9b79-7b6cf44ab63e" 
     }
 ]
