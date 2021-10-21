@@ -29,12 +29,19 @@ public class Education {
         this.degrees.add(degree);
     }
 
-
     /**
      * To be implemented
      */
     public String toString() {
         return "";
+    }
+
+    public ArrayList<String> getDegrees() {
+        return degrees;
+    }
+
+    public ArrayList<String> getDesc() {
+        return descriptions;
     }
 
 }
