@@ -11,7 +11,7 @@ public class Organization extends User{
     private String orgName;
     private String phoneNum;
     private String description;
-    private ArrayList<Internship> internship; // internship class will have internshipreview 
+    private ArrayList<Internship> internships; // internship class will have internshipreview 
 
     public Organization(String user, String pass, String email, String country, String orgName, String phoneNum, String description) {
         this.id = UUID.randomUUID();
@@ -22,7 +22,19 @@ public class Organization extends User{
         this.orgName = orgName;
         this.phoneNum = phoneNum;
         this.description = description;
-        internship = new ArrayList<Internship>();
+        internships = new ArrayList<Internship>();
+    }
+    public Organization(UUID id, String user, String pass, String email,
+        String country, String orgName, String phoneNum, String description, ArrayList<Internship> internships) {
+        this.id = id;
+        this.user = user;
+        this.pass = pass;
+        this.email = email;
+        this.country = country;
+        this.orgName = orgName;
+        this.phoneNum = phoneNum;
+        this.description = description;
+        this.internships = internships;
     }
 
     public void addInternship(Internship internship) {

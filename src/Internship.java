@@ -27,6 +27,19 @@ public class Internship {
         this.reviews = new ArrayList<Review>();
         this.applicants = new ArrayList<Student>();
     }
+    public Internship(UUID id, String job, String degree, boolean fullTime,
+        boolean inPerson, int pay, int hours, Experience experience, ArrayList<Review> reviews, ArrayList<Student> applicants) {
+        this.id = id;
+        this.job = job;
+        this.degree = degree;
+        this.fullTime = fullTime;
+        this.inPerson = inPerson;
+        this.pay = pay;
+        this.hours = hours;
+        this.experience = experience;
+        this.reviews = reviews;
+        this.applicants = applicants;
+    }
     public ArrayList<Review> addReview(Review review) {
         return null;
     }

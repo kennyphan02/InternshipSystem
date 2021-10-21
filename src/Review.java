@@ -19,6 +19,12 @@ public class Review {
         this.comment = comment;
         this.rating = rating;
     }
+    public Review(UUID id, String title, String comment, int rating) {
+        this.id = id;
+        this.title = title;
+        this.comment = comment;
+        this.rating = rating;
+    }
 
     public String toString() {
         return "";
