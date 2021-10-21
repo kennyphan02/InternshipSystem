@@ -23,9 +23,12 @@ public class InternshipUI {
 
         } else if(userInput == 3){
             createAccount();
-
+            studentMenu = 1;
         } else {
             
+        }
+        if(studentMenu == 1){
+            displayStudentMenu();
         }
     }
     
@@ -35,6 +38,18 @@ public class InternshipUI {
         System.out.println("1. Search Internship\n");
         System.out.println("2. Login\n");
         System.out.println("3. Create an Account\n");
+    }
+
+    private void displayStudentMenu(){
+        System.out.println("--------Internship System--------");
+        System.out.println("Input a number based off the choices below");
+        System.out.println("1. Search Internship");
+        System.out.println("2. View bookmarks for internships");
+        System.out.println("3. View my internship reviews");
+        System.out.println("4. View my student reviews");
+        System.out.println("5. Edit student profile");
+        System.out.println("6. Pending Internships");
+        System.out.println("7. Logout");
     }
 
     private void searchInternship()   {
