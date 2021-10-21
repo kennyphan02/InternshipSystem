@@ -40,6 +40,40 @@ public class Internship {
         this.reviews = reviews;
         this.applicants = applicants;
     }
+    public UUID getid() {
+        return id;
+    }
+    public String getjob() {
+        return job;
+    }
+    public String getdegree() {
+        return degree;
+    }
+    public boolean getfullTime() {
+        return fullTime;
+    }
+    public boolean getinPerson() {
+        return inPerson;
+    }
+    public int getpay() {
+        return pay;
+    }
+    public int gethours() {
+        return hours;
+    }
+    public Organization getorganization() {
+        return organization;
+    }
+    public Experience getexperience() {
+        return experience;
+    }
+    public ArrayList<Review> getreviews() {
+        return reviews;
+    }
+    public ArrayList<Student> getapplicants() {
+        return applicants;
+    }
+
     public ArrayList<Review> addReview(Review review) {
         return null;
     }
