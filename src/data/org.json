@@ -6,9 +6,9 @@
         "email": "microsoft@microsoft.com",
         "country": "USA",
         "orgName": "Microsoft",
-        "studentId":[2, 4],
-        "internshipId": 2,
-        "internshipReviewsId": 3
+        "phoneNum": "1-800-555-2984",
+        "description": "The world leader in software development excellence.",
+        "internshipId": 2
     },{
         "UUID":"",
         "user": "Amazon",
@@ -16,8 +16,8 @@
         "email": "amazon@hotmail.com",
         "country": "USA",
         "orgName": "Amazon",
-        "studentId": [4, 2, 3, 1],
-        "internshipId": [1, 3],
-        "internshipReviewsId": [1, 2]
+        "phoneNum": "1-800-666-2049",
+        "description": "Worldwide E-Commerce Leader.",
+        "internshipId": [1, 3]
     }
 ]

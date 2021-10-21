@@ -1,5 +1,8 @@
+import java.util.UUID;
+
 public class Review {
 
+    private UUID id;
     private String title;
     private String comment;
     private int rating;
@@ -11,6 +14,7 @@ public class Review {
      * @param rating type rating
      */
     public Review(String title, String comment, int rating) {
+        this.id = UUID.randomUUID();
         this.title = title;
         this.comment = comment;
         this.rating = rating;

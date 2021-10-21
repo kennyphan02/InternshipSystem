@@ -1,7 +1,9 @@
+import java.util.UUID;
 import java.util.ArrayList;
 
 public class Student extends User {
 
+    private UUID id;
     private String user;
     private String pass;
     private String email;
@@ -27,6 +29,7 @@ public class Student extends User {
      */
     public Student(String user, String pass, String email, String birthday, 
             String country, Resume resume, String college, String language) {
+        this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
         this.email = email;

@@ -1,22 +1,28 @@
+import java.util.UUID;
 import java.util.ArrayList;
 
 public class Organization extends User{
+
+    private UUID id;
     private String user;
     private String pass;
     private String email;
     private String country;
     private String orgName;
+    private String phoneNum;
+    private String description;
     private ArrayList<Internship> internship; // internship class will have internshipreview 
-    private ArrayList<Student> students;
 
-    public Organization(String user, String pass, String email, String country, String orgName) {
+    public Organization(String user, String pass, String email, String country, String orgName, String phoneNum, String description) {
+        this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
         this.email = email;
         this.country = country;
         this.orgName = orgName;
+        this.phoneNum = phoneNum;
+        this.description = description;
         internship = new ArrayList<Internship>();
-        students = new ArrayList<Student>();
     }
 
     public void addInternship(Internship internship) {
@@ -28,26 +34,6 @@ public class Organization extends User{
     }
 
     public void editInternship(Internship internship) {
-        return;
-    }
-
-    public ArrayList<Student> viewProfiles() {
-        return students;
-    }
-
-    public Student searchStudent(ArrayList<Student> studentList) {
-        return studentList.get(0);
-    }
-
-    public void addStudent(Student student) {
-        return;
-    }
-
-    public void removeStudent(Student student) {
-        return;
-    }
-
-    public void addStudentReview(Student student, Review review) {
         return;
     }
 
