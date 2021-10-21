@@ -1,6 +1,6 @@
 [ 
     {
-        "UUID":"",
+        "UUID":"590fdc16-3626-49f8-a855-baccd3aba799",
         "user": "Kenny Phan",
         "pass": "HawaiiIsCool123",
         "email": "kennyphan@gmail.com",
@@ -12,7 +12,7 @@
         "InternshipId": 2,
         "studentReviewsId": 4  
     },{
-        "UUID":"",
+        "UUID":"aeca4c82-e986-4f04-a08a-34328fd8d5d1",
         "user": "Thomas Vu",
         "pass": "!mtv&vCMFdlu",
         "email": "thomasvu@email.com",
@@ -24,7 +24,7 @@
         "InternshipId": [1, 2],
         "studentReviewsId": [1, 5]  
     },{
-        "UUID":"",
+        "UUID":"2e8bc9a2-2a69-498d-b12a-28b4df5343c4",
         "user": "Daniel Nguyen",
         "pass": "afjsAKLUJAF",
         "email": "dannyn4@email.com",
@@ -36,7 +36,7 @@
         "InternshipId": 2,
         "studentReviewsId": 3 
     },{
-        "UUID":"",
+        "UUID":"9e2a6a20-0ed4-4e21-bfcd-0db2c302eee4",
         "user": "Danai Angelidis",
         "pass": "beepBoopBap456!!!!!!!!!",
         "email": "danaiagg@email.com",

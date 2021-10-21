@@ -1,6 +1,6 @@
 [
     {
-        "UUID":"",
+        "UUID":"3d523283-a353-41ae-b702-488cfb6917d5",
         "job": "Software Development Engineer Internship",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": true,
@@ -11,7 +11,7 @@
         "experience": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
         "reviewId": 2
     },{
-        "UUID":"",
+        "UUID":"a33421b9-e82a-465c-8aa5-a85b8de7db24",
         "job": "Amazon Operations Finance Rotational Program Internship",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
@@ -22,7 +22,7 @@
         "experience": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
         "reviewId": 1
     },{
-        "UUID":"",
+        "UUID":"230d04f2-389b-484b-bb64-db73b08b398a",
         "job": "Site Reliability Engineering: Summer Intern Opportunities",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
