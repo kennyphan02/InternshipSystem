@@ -13,6 +13,7 @@ public class Resume {
 
     public Resume(String firstName, String lastName, String profession, 
             String email, Experience experience, Education education, String language) {
+        this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.profession = profession;

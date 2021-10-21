@@ -14,6 +14,7 @@ public class Review {
      * @param rating type rating
      */
     public Review(String title, String comment, int rating) {
+        this.id = UUID.randomUUID();
         this.title = title;
         this.comment = comment;
         this.rating = rating;

@@ -14,6 +14,7 @@ public class Organization extends User{
     private ArrayList<Internship> internship; // internship class will have internshipreview 
 
     public Organization(String user, String pass, String email, String country, String orgName, String phoneNum, String description) {
+        this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
         this.email = email;
