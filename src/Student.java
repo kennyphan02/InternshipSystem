@@ -28,7 +28,7 @@ public class Student extends User {
      * @param language type String
      */
     public Student(String user, String pass, String email, String birthday, 
-            String country, Resume resume, String college, String language) {
+            String country, Resume resume, String college, ArrayList<String> language) {
         this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
@@ -42,7 +42,7 @@ public class Student extends User {
         reviews = new ArrayList<Review>();
     }
     public Student(UUID id, String user, String pass, String email, String birthday, 
-            String country, Resume resume, String college, String language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
+            String country, Resume resume, String college, ArrayList<String> language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
         this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
