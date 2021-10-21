@@ -7,9 +7,9 @@
         "inperson": true,
         "pay": "TBD",
         "hours": 40,
-        "organizationUUId": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
+        "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
-        "reviewId": 2
+        "reviewUUID": 2
     },{
         "UUID":"a33421b9-e82a-465c-8aa5-a85b8de7db24",
         "job": "Amazon Operations Finance Rotational Program Internship",
@@ -18,9 +18,9 @@
         "inperson": false,
         "pay": "TBD",
         "hours": 10,
-        "organizationUUId": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
+        "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
         "experience": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
-        "reviewId": 1
+        "reviewUUID": 1
     },{
         "UUID":"230d04f2-389b-484b-bb64-db73b08b398a",
         "job": "Site Reliability Engineering: Summer Intern Opportunities",
@@ -29,8 +29,8 @@
         "inperson": true,
         "pay": "$20/hr",
         "hours": 25,
-        "organizationId": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
+        "organizationID": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
         "experience": ["One year of programming experience in an object-oriented language."],
-        "reviewId": 3
+        "reviewUUID": 3
     }
 ]
