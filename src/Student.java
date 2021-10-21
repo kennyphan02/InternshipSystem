@@ -11,7 +11,7 @@ public class Student extends User {
     private String country;
     private Resume resume;
     private String college;
-    private String language;
+    private ArrayList<String> language;
     private ArrayList<Internship> bookmarks;
     private ArrayList<Review> reviews;
 
@@ -28,7 +28,7 @@ public class Student extends User {
      * @param language type String
      */
     public Student(String user, String pass, String email, String birthday, 
-            String country, Resume resume, String college, String language) {
+            String country, Resume resume, String college, ArrayList<String> language) {
         this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
@@ -42,7 +42,7 @@ public class Student extends User {
         reviews = new ArrayList<Review>();
     }
     public Student(UUID id, String user, String pass, String email, String birthday, 
-            String country, Resume resume, String college, String language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
+            String country, Resume resume, String college, ArrayList<String> language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
         this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
@@ -92,4 +92,47 @@ public class Student extends User {
         return "";
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return pass;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public Resume getResume() {
+        return resume;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public ArrayList<String> getLanguage() {
+        return language;
+    }
+
+    public ArrayList<Internship> getBookmarks() {
+        return bookmarks;
+    }
+
+    public ArrayList<Review> getReview() {
+        return reviews;
+    }
 }

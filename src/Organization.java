@@ -53,4 +53,40 @@ public class Organization extends User{
         return "";
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return pass;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getOrgName() {
+        return orgName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNum;
+    }
+
+    public String getDesc() {
+        return description;
+    }
+
+    public ArrayList<Internship> getInternships() {
+        return internships;
+    }
+
 }
