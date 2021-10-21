@@ -92,4 +92,47 @@ public class Student extends User {
         return "";
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return pass;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public Resume getResume() {
+        return resume;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public ArrayList<Internship> getBookmarks() {
+        return bookmarks;
+    }
+
+    public ArrayList<Review> getReview() {
+        return reviews;
+    }
 }
