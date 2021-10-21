@@ -12,8 +12,8 @@ public class DataLoader extends DataConstants {
         return users;
     }
 
-    public static ArrayList<Org> getOrgs() {
-        ArrayList<Org> orgs = new ArrayList<Org>();
+    public static ArrayList<Organization> getOrgs() {
+        ArrayList<Organization> orgs = new ArrayList<Organization>();
         return orgs;
     }
 
@@ -27,13 +27,13 @@ public class DataLoader extends DataConstants {
         return internships;
     }
 
-    public static ArrayList<studentReview> getStudentReviews() {
-        ArrayList<studentReview> studentReviews = new ArrayList<studentReview>();
+    public static ArrayList<Review> getStudentReviews() {
+        ArrayList<Review> studentReviews = new ArrayList<Review>();
         return studentReviews;
     }
 
-    public static ArrayList<internshipReview> getInternshipReviews() {
-        ArrayList<internshipReview> internshipReviews = new ArrayList<internshipReviews>();
+    public static ArrayList<Review> getInternshipReviews() {
+        ArrayList<Review> internshipReviews = new ArrayList<Review>();
         return internshipReviews;
     }
 
