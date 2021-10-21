@@ -30,5 +30,19 @@ public class Review {
         return "";
     }
 
-    
+    public UUID getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public int getRating() {
+        return rating;
+    }
 }
