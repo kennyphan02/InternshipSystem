@@ -9,8 +9,8 @@
         "resumeUUID": "58612df9-ffaa-4715-b245-14d3bc04b7b5",
         "college": "University of South Carolina",
         "language": "English",
-        "InternshipId": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
-        "studentReviewsId": 4  
+        "InternshipUUID": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
+        "studentReviewsUUID": 4  
     },{
         "UUID":"aeca4c82-e986-4f04-a08a-34328fd8d5d1",
         "user": "Thomas Vu",
@@ -21,8 +21,8 @@
         "resumeUUID": "555bfbed-16d3-4bcd-bc6a-13fc9f7c7871",
         "college": "University of South Carolina",
         "language": "English",
-        "InternshipId": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
-        "studentReviewsId": [1, 5]  
+        "InternshipUUID": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
+        "studentReviewsUUID": [1, 5]  
     },{
         "UUID":"2e8bc9a2-2a69-498d-b12a-28b4df5343c4",
         "user": "Daniel Nguyen",
@@ -33,8 +33,8 @@
         "resumeUUID": "55f46117-a90a-482c-9ef4-eac482ed89be",
         "college": "University of South Carolina",
         "language": "English",
-        "InternshipId": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
-        "studentReviewsId": 3 
+        "InternshipUUID": "a33421b9-e82a-465c-8aa5-a85b8de7db24",
+        "studentReviewsUUID": 3 
     },{
         "UUID":"9e2a6a20-0ed4-4e21-bfcd-0db2c302eee4",
         "user": "Danai Angelidis",
@@ -45,7 +45,7 @@
         "resumeUUID": "98700033-2f9d-41a8-a4b7-9df6c45f53f5",
         "college": "University of South Carolina",
         "language": "English",
-        "InternshipId": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
-        "studentReviewsId": 2 
+        "InternshipUUID": ["3d523283-a353-41ae-b702-488cfb6917d5", "a33421b9-e82a-465c-8aa5-a85b8de7db24"],
+        "studentReviewsUUID": 2 
     }
 ]
