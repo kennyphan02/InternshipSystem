@@ -13,7 +13,7 @@ public class Student extends User {
     private String college;
     private String language;
     private ArrayList<Internship> bookmarks;
-    private ArrayList<Review> studentReviews;
+    private ArrayList<Review> reviews;
 
     /** 
      * Default constructor that initalizes the private variables in the Student class. Bookmarks are initalized to an arraylist of internships.
@@ -39,7 +39,21 @@ public class Student extends User {
         this.college = college;
         this.language = language;
         bookmarks = new ArrayList<Internship>();
-        studentReviews = new ArrayList<Review>();
+        reviews = new ArrayList<Review>();
+    }
+    public Student(UUID id, String user, String pass, String email, String birthday, 
+            String country, Resume resume, String college, String language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
+        this.id = UUID.randomUUID();
+        this.user = user;
+        this.pass = pass;
+        this.email = email;
+        this.birthday = birthday;
+        this.country = country;
+        this.resume = resume;
+        this.college = college;
+        this.language = language;
+        this.bookmarks = bookmarks;
+        this.reviews = reviews;
     }
 
     public boolean passwordCondition() {
