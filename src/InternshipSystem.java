@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class InternshipSystem {
     private InternshipList internshipList;
@@ -65,9 +66,25 @@ public class InternshipSystem {
             createStudentProfile();
             createResume();  
             Student student = new Student(username, password, email, birthday, country, resume, college, language);
-            System.out.println(resume);
-            String removethis = scanner.nextLine();
         }
+        else if (userInput == 2){
+            //
+        }
+        else{
+            try {
+                System.out.println("\nInvalid input...");
+                TimeUnit.MILLISECONDS.sleep(1000); 
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                createAccount();
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+        }
+    }
+
+    public Resume getResume(){
+        return resume;
     }
 
     private void createStudentProfile(){
