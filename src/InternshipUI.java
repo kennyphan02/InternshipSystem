@@ -7,12 +7,15 @@ public class InternshipUI {
     private int studentMenu;
     private int organizationMenu;
     private int studentInput;
+    private int guestInput;
+    private int guestUser;
 
     InternshipUI()  {
         scanner = new Scanner(System.in);
         internshipSystem = new InternshipSystem();
         studentMenu = 0;
         organizationMenu = 0;
+        guestUser = 1;
     }
 
     public void run() {
@@ -20,28 +23,27 @@ public class InternshipUI {
             if(studentMenu == 0 && organizationMenu == 0){
                 displayMainMenu();
             }
-            int guestInput = internshipSystem.getUserInput();
-            if(guestInput == 1){
-                // searchInternship();
-            } else if(guestInput == 2){
-                login();
-            } else if(guestInput == 3){
-                createAccount();
-                studentMenu = 1;
-            } else if(guestInput == 4) {
-                break;
-            } else {
-                try {
-                    System.out.println("\nInvalid Option...");
-                    TimeUnit.MILLISECONDS.sleep(1000); 
-                } catch (Exception e) {
-                    System.out.println("Error");
+            if(guestUser == 1){
+                guestInput = internshipSystem.getUserInput();
+                if(guestInput == 1){
+                    // searchInternship();
+                } else if(guestInput == 2){
+                    login();
+                } else if(guestInput == 3){
+                    createAccount();
+                } else if(guestInput == 4) {
+                    break;
+                } else {
+                    try {
+                        System.out.println("\nInvalid Option...");
+                        TimeUnit.MILLISECONDS.sleep(1000); 
+                    } catch (Exception e) {
+                        System.out.println("Error");
+                    }
+                    clearConsole();
                 }
-                clearConsole();
-
             }
             if(studentMenu == 1){
-                guestInput = 0;
                 clearConsole();
                 displayStudentMenu();
                 inputUserOptions();
@@ -74,13 +76,15 @@ public class InternshipUI {
         if(studentInput == 6){
             logOff();
         }
+        else if(studentInput == 4){
+            internshipSystem.editStudentProfile();
+        }
         if(studentInput == 8){
             System.out.println(internshipSystem.getResume());
             System.exit(0);
         }
 
     }
-
     private void logOff(){
         try {
             System.out.println("\nLogging off...");
@@ -91,6 +95,7 @@ public class InternshipUI {
         }
         studentMenu = 0;
         organizationMenu = 0;
+        guestUser = 1;
         clearConsole();
     }
 
@@ -108,7 +113,28 @@ public class InternshipUI {
     }
 
     private void createAccount(){
-        internshipSystem.createAccount();
+        clearConsole();
+        System.out.println("--------Internship System--------");
+        System.out.println("Are you a student or an organization? Input 1 for student or 2 for organization:  ");
+        int input = internshipSystem.getUserInput();
+        if(input == 1){
+            studentMenu = 1;
+            guestUser = 0;
+            internshipSystem.createStudentAccount();
+        }
+        else if(input == 2){
+
+        }
+        else{
+            try {
+                System.out.println("\nInvalid input...");
+                TimeUnit.MILLISECONDS.sleep(1000); 
+                clearConsole();
+                createAccount();
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+        }
     }
     public static void main(String[] args)  {
         InternshipUI driver = new InternshipUI();

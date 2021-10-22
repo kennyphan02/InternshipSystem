@@ -31,9 +31,8 @@ public class InternshipSystem {
     }
     
     public void login(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println("--------Internship System--------");
+        clearConsole();
+        displayInternshipLine();
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
         System.out.println("");
@@ -41,16 +40,9 @@ public class InternshipSystem {
         String password = scanner.nextLine();
     }
 
-    public void createAccount(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println("--------Internship System--------");
-        System.out.println("Are you a student or an organization? Input 1 for student or 2 for organization:  ");
-        int userInput = getUserInput();
-        if(userInput == 1){
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-            System.out.println("--------Internship System--------");
+    public void createStudentAccount(){
+            clearConsole();
+            displayInternshipLine();
             System.out.print("Input username: ");
             username = scanner.nextLine();
             System.out.print("Input password: ");
@@ -66,25 +58,83 @@ public class InternshipSystem {
             createStudentProfile();
             createResume();  
             Student student = new Student(username, password, email, birthday, country, resume, college, language);
-        }
-        else if (userInput == 2){
-            //
-        }
-        else{
-            try {
-                System.out.println("\nInvalid input...");
-                TimeUnit.MILLISECONDS.sleep(1000); 
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
-                createAccount();
-            } catch (Exception e) {
-                System.out.println("Error");
+    }
+
+    public void editStudentProfile(){
+        clearConsole();
+        while(true){
+            clearConsole();
+            displayInternshipLine();
+            System.out.println("1. First Name: " + firstName);
+            System.out.println("2. Last Name: " + lastName);
+            System.out.println("3. Email: " + email);
+            System.out.println("4. Birthday: " + birthday);
+            System.out.println("5. Country: " + country);
+            System.out.println("6. College: " + college);
+            System.out.println("7. Quit");
+            System.out.println("\nInput a number to edit the number's field. press 7 to quit");
+            int getUserInput = getUserInput();
+            // A switch statement would be more optimal below but I forgot how they work exactly -Kenny
+            if(getUserInput == 1){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("First name: ");
+                firstName = scanner.nextLine();
+            }
+            else if(getUserInput == 2){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("Last name: ");
+                lastName = scanner.nextLine();
+            }
+            else if(getUserInput == 3){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("Email: ");
+                email = scanner.nextLine();
+            }
+            else if(getUserInput == 4){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("Birthday: ");
+                birthday = scanner.nextLine();
+            }
+            else if(getUserInput == 5){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("Country: ");
+                country = scanner.nextLine();
+            }
+            else if(getUserInput == 6){
+                clearConsole();
+                displayInternshipLine();
+                System.out.print("College: ");
+                college = scanner.nextLine();
+            }
+            else if(getUserInput == 7){
+                break;
+            }
+            else{
+                try {
+                    System.out.println("\nInvalid Option...");
+                    TimeUnit.MILLISECONDS.sleep(1000); 
+                } catch (Exception e) {
+                    System.out.println("Error");
+                }
             }
         }
     }
 
     public Resume getResume(){
         return resume;
+    }
+
+    private void clearConsole(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+    private void displayInternshipLine(){
+        System.out.println("--------Internship System--------");
     }
 
     private void createStudentProfile(){
@@ -168,7 +218,7 @@ public class InternshipSystem {
             System.out.print("Input description: ");
             String description = scanner.nextLine();
             education.addDescription(description);
-            System.out.print("Input quit? type quit to quit or no to keep inputting education: ");
+            System.out.print("Input quit? type quit to quit or no to ke ep inputting education: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
                 count = false;
