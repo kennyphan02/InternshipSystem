@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit;
 public class InternshipUI {
     private Scanner scanner;
     private InternshipSystem internshipSystem;
-    private int studentMenu;
-    private int organizationMenu;
+    private int studentUser;
+    private int organizationUser;
     private int studentInput;
     private int guestInput;
     private int guestUser;
@@ -13,14 +13,14 @@ public class InternshipUI {
     InternshipUI()  {
         scanner = new Scanner(System.in);
         internshipSystem = new InternshipSystem();
-        studentMenu = 0;
-        organizationMenu = 0;
+        studentUser = 0;
+        organizationUser = 0;
         guestUser = 1;
     }
 
     public void run() {
         while(true){
-            if(studentMenu == 0 && organizationMenu == 0){
+            if(studentUser == 0 && organizationUser == 0){
                 displayMainMenu();
             }
             if(guestUser == 1){
@@ -43,7 +43,7 @@ public class InternshipUI {
                     clearConsole();
                 }
             }
-            if(studentMenu == 1){
+            if(studentUser == 1){
                 clearConsole();
                 displayStudentMenu();
                 inputUserOptions();
@@ -93,8 +93,8 @@ public class InternshipUI {
         } catch (Exception e) {
             System.out.println("Error");
         }
-        studentMenu = 0;
-        organizationMenu = 0;
+        studentUser = 0;
+        organizationUser = 0;
         guestUser = 1;
         clearConsole();
     }
@@ -118,7 +118,7 @@ public class InternshipUI {
         System.out.println("Are you a student or an organization? Input 1 for student or 2 for organization:  ");
         int input = internshipSystem.getUserInput();
         if(input == 1){
-            studentMenu = 1;
+            studentUser = 1;
             guestUser = 0;
             internshipSystem.createStudentAccount();
         }
