@@ -67,12 +67,18 @@ public class InternshipUI {
         System.out.println("4. Edit student profile");
         System.out.println("5. Pending Internships");
         System.out.println("6. Logout");
+        System.out.println("Input 8 to display student's resume");
     }
     private void inputUserOptions(){
         studentInput = internshipSystem.getUserInput();
         if(studentInput == 6){
             logOff();
         }
+        if(studentInput == 8){
+            System.out.println(internshipSystem.getResume());
+            System.exit(0);
+        }
+
     }
 
     private void logOff(){
