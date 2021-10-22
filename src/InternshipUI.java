@@ -31,12 +31,18 @@ public class InternshipUI {
             } else if(guestInput == 4) {
                 break;
             } else {
-                System.out.println("Invalid Option");
+                try {
+                    System.out.println("\nInvalid Option...");
+                    TimeUnit.MILLISECONDS.sleep(1000); 
+                } catch (Exception e) {
+                    System.out.println("Error");
+                }
+                clearConsole();
+
             }
             if(studentMenu == 1){
                 guestInput = 0;
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
+                clearConsole();
                 displayStudentMenu();
                 inputUserOptions();
             }
@@ -79,12 +85,15 @@ public class InternshipUI {
         }
         studentMenu = 0;
         organizationMenu = 0;
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        
+        clearConsole();
     }
 
-    private void searchInternship()   {
+    private void clearConsole(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    private void searchInternship(){
         // internshipSystem.searchInternship();
     }
 
