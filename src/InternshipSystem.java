@@ -65,6 +65,8 @@ public class InternshipSystem {
             createStudentProfile();
             createResume();  
             Student student = new Student(username, password, email, birthday, country, resume, college, language);
+            System.out.println(resume);
+            String removethis = scanner.nextLine();
         }
     }
 
@@ -96,7 +98,6 @@ public class InternshipSystem {
         createExperiences();
         createEducation();
         resume = new Resume(firstName, lastName, profession, email, experience, education, language);
-        System.out.println(resume);
     }
 
     private void createLanguages(){
@@ -107,7 +108,7 @@ public class InternshipSystem {
             System.out.print("Input language: ");
             String languageUserInput = scanner.nextLine();
             language.add(languageUserInput);
-            System.out.print("Input quit? type quit to quit or no to keep inputting experiences: ");
+            System.out.print("Input quit? type quit to quit or no to keep inputting languages: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
                 count = false;

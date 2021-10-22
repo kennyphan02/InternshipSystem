@@ -33,7 +33,11 @@ public class Education {
      * To be implemented
      */
     public String toString() {
-        return "";
+        String list = "";
+        for(int i = 0; i < this.degrees.size(); i++){
+            list += "       Degree: " + this.degrees.get(i) + "\n       Description: " + this.descriptions.get(i) + "\n\n***************\n";
+        }
+        return "\n" + list;
     }
 
     public ArrayList<String> getDegrees() {

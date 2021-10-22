@@ -63,8 +63,13 @@ public class Resume {
      * To be changed
      */
     public String toString() {
+        String languageList = "";
+        for(int i = 0; i < this.language.size(); i++){
+            languageList += this.language.get(i) + ", ";
+
+        }
         return "First Name: " + this.firstName + "\nLast Name: " + this.lastName + "\nProfession: " + this.profession + "\nEmail: " + 
-            this.email + "\nExperience: " + this.experience + "\nEducation: " + this.education + "\nLanguage: " + this.language;
+            this.email + "\nExperience:\n" + this.experience + "\nEducation: " + this.education + "\n\nLanguage(s): " + languageList;
     }
     
 }

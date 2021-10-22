@@ -37,7 +37,11 @@ public class Experience {
      * to be implemented
      */
     public String toString() {
-        return "";
+        String list = "";
+        for(int i = 0; i < this.titles.size(); i++){
+            list += "       Title: " + this.titles.get(i) + "\n         Description: " + this.descriptions.get(i) + "\n\n***************\n";
+        }
+        return " " + list;
     }
     
     public ArrayList<String> gettitles() {
