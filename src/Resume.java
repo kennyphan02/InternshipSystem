@@ -59,8 +59,12 @@ public class Resume {
         return language;
     }
 
+    /**
+     * To be changed
+     */
     public String toString() {
-        return "";
+        return "First Name: " + this.firstName + "\nLast Name: " + this.lastName + "\nProfession: " + this.profession + "\nEmail: " + 
+            this.email + "\nExperience: " + this.experience + "\nEducation: " + this.education + "\nLanguage: " + this.language;
     }
     
 }
