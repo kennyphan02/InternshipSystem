@@ -1,10 +1,12 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class InternshipUI {
     private Scanner scanner;
     private InternshipSystem internshipSystem;
     private int studentMenu;
     private int organizationMenu;
+    private int studentInput;
 
     InternshipUI()  {
         scanner = new Scanner(System.in);
@@ -26,10 +28,13 @@ public class InternshipUI {
             } else if(guestInput == 3){
                 createAccount();
                 studentMenu = 1;
+            } else if(guestInput == 4) {
+                break;
             } else {
                 System.out.println("Invalid Option");
             }
             if(studentMenu == 1){
+                guestInput = 0;
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
                 displayStudentMenu();
@@ -44,6 +49,7 @@ public class InternshipUI {
         System.out.println("1. Search Internship\n");
         System.out.println("2. Login\n");
         System.out.println("3. Create an Account\n");
+        System.out.println("4. Quit\n");
     }
 
     private void displayStudentMenu(){
@@ -51,14 +57,30 @@ public class InternshipUI {
         System.out.println("Input a number based off the choices below");
         System.out.println("1. Search Internship");
         System.out.println("2. View bookmarks for internships");
-        System.out.println("3. View my internship reviews");
-        System.out.println("4. View my student reviews");
-        System.out.println("5. Edit student profile");
-        System.out.println("6. Pending Internships");
-        System.out.println("7. Logout");
+        System.out.println("3. View my student reviews");
+        System.out.println("4. Edit student profile");
+        System.out.println("5. Pending Internships");
+        System.out.println("6. Logout");
     }
     private void inputUserOptions(){
-        String studentInput = scanner.nextLine();
+        studentInput = internshipSystem.getUserInput();
+        if(studentInput == 6){
+            logOff();
+        }
+    }
+
+    private void logOff(){
+        try {
+            System.out.println("\nLogging off...");
+            TimeUnit.MILLISECONDS.sleep(1000); 
+            
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
+        studentMenu = 0;
+        organizationMenu = 0;
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         
     }
 
