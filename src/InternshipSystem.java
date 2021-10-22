@@ -96,6 +96,7 @@ public class InternshipSystem {
         createExperiences();
         createEducation();
         resume = new Resume(firstName, lastName, profession, email, experience, education, language);
+        System.out.println(resume);
     }
 
     private void createLanguages(){
@@ -164,6 +165,7 @@ public class InternshipSystem {
         int userInput = Integer.parseInt(input);
         return userInput;
     }
+
 
 
 
