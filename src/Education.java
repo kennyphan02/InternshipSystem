@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Keeps track of information for user eeducation
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class Education {
 
     private ArrayList<String> degrees;
@@ -8,7 +12,7 @@ public class Education {
     private Scanner scanner;
 
     /**
-     * Default constructor that initalizes the degree and description. scanner is initalized for future usages.
+     * Default constructor that initalizes the degree and description. scanner is initalized for future usage.
      * @param degree type string
      */
     public Education() {
@@ -18,18 +22,23 @@ public class Education {
     }
 
     /**
-     * Adds a description to the arraylist of descriptions. The user may want to add multiple descriptions on the education section of their resume. 
+     * Adds a description to the arraylist of descriptions. The user shall add multiple descriptions as needed. 
      * @param description type String
      */
     public void addDescription(String description) {
         this.descriptions.add(description);
     }
 
+    /**
+     * Adds a degree to the arraylist of degrees. User shall add multiple degrees as needed.
+     * @param degree type String
+     */
     public void addDegree(String degree) {
         this.degrees.add(degree);
     }
 
     /**
+     * Returns all degrees and descriptions for user.
      * To be implemented
      */
     public String toString() {
@@ -40,10 +49,18 @@ public class Education {
         return "\n" + list;
     }
 
+    /**
+     * Get the degrees.
+     * @return degrees 
+     */
     public ArrayList<String> getDegrees() {
         return degrees;
     }
 
+    /**
+     * Get the descriptions.
+     * @return descriptions of education
+     */
     public ArrayList<String> getDesc() {
         return descriptions;
     }
