@@ -20,4 +20,40 @@ public class DataConstants {
     protected static final String REVIEW_COMMENT = "comment";
     protected static final String REVIEW_RATING = "rating";
 
+    protected static final String ORG_FILE_NAME = "../data/org.json";
+    protected static final String ORG_UUID = "UUID";
+    protected static final String ORG_USERNAME = "user";
+    protected static final String ORG_PASSWORD = "pass";
+    protected static final String ORG_EMAIL = "email";
+    protected static final String ORG_COUNTRY = "country";
+    protected static final String ORG_NAME = "orgName";
+    protected static final String ORG_PHONE_NUM = "phoneNum";
+    protected static final String ORG_DESCRIPTION = "description";
+    protected static final String ORG_INTERNSHIPS = "internships";
+
+    protected static final String RESUME_FILE_NAME = "../data/Resume.json";
+    protected static final String RESUME_UUID = "UUID";
+    protected static final String RESUME_FIRST_NAME = "firstName";
+    protected static final String RESUME_LAST_NAME = "lastName";
+    protected static final String RESUME_PROFESSION = "profession";
+    protected static final String RESUME_EMAIL = "email";
+    protected static final String RESUME_SKILLS = "skils";
+    protected static final String RESUME_EXPERIENCE = "experience";
+    protected static final String RESUME_EDUCATION = "education";
+    protected static final String RESUME_LANGUAGES = "language";
+
+    protected static final String STUDENT_FILE_NAME = "../data/student.json";
+    protected static final String STUDENT_UUID = "UUID";
+    protected static final String STUDENT_USER_NAME = "user";
+    protected static final String STUDENT_PASSWORD = "pass";
+    protected static final String STUDENT_EMAIL = "email";
+    protected static final String STUDENT_BIRTHDAY = "birthday";
+    protected static final String STUDENT_COUNTRY = "country";
+    protected static final String STUDENT_RESUME = "resumeUUID";
+    protected static final String STUDENT_COLLEGE = "college";
+    protected static final String STUDENT_LANGUAGES = "language";
+    protected static final String STUDENT_BOOKMARKS = "bookmarkedInternships";
+    protected static final String STUDENT_REVIEWS = "studentReviews";
+
+
 }
