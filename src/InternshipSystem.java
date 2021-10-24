@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 public class InternshipSystem {
     private InternshipList internshipList;
-    private UserList userList;
     private Scanner scanner;
     private String username;
     private String password;
