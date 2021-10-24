@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class InternshipSystem {
-    private InternshipList internshipList;
+    private Internships internships;
     private Scanner scanner;
     private String username;
     private String password;
