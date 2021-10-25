@@ -15,6 +15,29 @@ public class Student extends User {
     private ArrayList<Internship> bookmarks;
     private ArrayList<Review> reviews;
 
+       /** 
+     * Default constructor that initalizes the private variables in the Student class. Bookmarks are initalized to an arraylist of internships.
+     * StudentReviews are initalized to an arraylist of review.
+     * @param user type String
+     * @param pass type String
+     * @param email type String
+     * @param birthday type String
+     * @param country type String
+     * @param resume type Resume
+     * @param college type ArrayList<String>
+     * @param language type ArrayList<String>
+     */
+    public Student(String user, String pass, String email, String birthday, String country, Resume resume, String college, ArrayList<String> language) {
+        this.user = user;
+        this.pass = pass;
+        this.email = email;
+        this.birthday = birthday;
+        this.country = country;
+        this.resume = resume;
+        this.college = college;
+        this.language = language;
+    }
+
     /** 
      * Default constructor that initalizes the private variables in the Student class. Bookmarks are initalized to an arraylist of internships.
      * StudentReviews are initalized to an arraylist of review.
