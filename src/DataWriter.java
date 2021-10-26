@@ -120,4 +120,42 @@ public class DataWriter extends DataConstants {
         return internshipDetails;
 	}
 
+    /**
+     * 
+     */
+    
+    public static void saveResume() {
+		Resumes resumes = Resumes.getInstance();
+		ArrayList<Resume> resumeList = resumes.getResumesList();
+		JSONArray jsonResumes = new JSONArray();
+		
+		for(int i=0; i< resumeList.size(); i++) {
+			jsonResumes.add(getResumeJSON(resumeList.get(i)));
+		}
+		
+        try (FileWriter file = new FileWriter(RESUME_FILE_NAME)) {
+ 
+            file.write(jsonResumes.toJSONString());
+            file.flush();
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public static JSONObject getResumeJSON(Resume resume) {
+		JSONObject resumeDetails = new JSONObject();
+		resumeDetails.put(RESUME_UUID, resume.getid().toString());
+		resumeDetails.put(RESUME_FIRST_NAME, resume.getfirstName());
+        resumeDetails.put(RESUME_LAST_NAME, resume.getlastName());
+        resumeDetails.put(RESUME_PROFESSION, resume.getprofession());
+        resumeDetails.put(RESUME_EMAIL, resume.getemail());
+        resumeDetails.put(RESUME_SKILLS, resume.getskills());
+        resumeDetails.put(RESUME_EDUCATION, resume.geteducation());
+        resumeDetails.put(RESUME_EXPERIENCE, resume.getexperience());
+        resumeDetails.put(RESUME_LANGUAGES, resume.getlanguage());
+        
+        return resumeDetails;
+	}
+
 }
