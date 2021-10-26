@@ -41,43 +41,44 @@ public class Internship {
         this.applicants = applicants;
     }
     public UUID getid() {
-        return id;
+        return this.id;
     }
     public String getjob() {
-        return job;
+        return this.job;
     }
     public String getdegree() {
-        return degree;
+        return this.degree;
     }
     public boolean getfullTime() {
-        return fullTime;
+        return this.fullTime;
     }
     public boolean getinPerson() {
-        return inPerson;
+        return this.inPerson;
     }
     public int getpay() {
-        return pay;
+        return this.pay;
     }
     public int gethours() {
-        return hours;
+        return this.hours;
     }
     public Organization getorganization() {
-        return organization;
+        return this.organization;
     }
     public Experience getexperience() {
-        return experience;
+        return this.experience;
     }
     public ArrayList<Review> getreviews() {
-        return reviews;
+        return this.reviews;
     }
     public ArrayList<Student> getapplicants() {
-        return applicants;
+        return this.applicants;
     }
 
     public ArrayList<Review> addReview(Review review) {
         return null;
     }
     public String toString() {
+
         return "";
     }
     
