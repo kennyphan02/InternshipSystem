@@ -9,7 +9,6 @@ public class Education {
 
     private ArrayList<String> degrees;
     private ArrayList<String> descriptions;
-    private Scanner scanner;
 
     /**
      * Default constructor that initalizes the degree and description. scanner is initalized for future usage.
@@ -50,7 +49,7 @@ public class Education {
     }
 
     /**
-     * Get the degrees.
+     * Get the degrees for the user.
      * @return degrees 
      */
     public ArrayList<String> getDegrees() {
@@ -58,7 +57,7 @@ public class Education {
     }
 
     /**
-     * Get the descriptions.
+     * Get the descriptions for the user.
      * @return descriptions of education
      */
     public ArrayList<String> getDesc() {
