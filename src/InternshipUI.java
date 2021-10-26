@@ -7,6 +7,7 @@ public class InternshipUI {
     private int studentUser;
     private int organizationUser;
     private int studentInput;
+    private int organizationInput;
     private int guestInput;
     private int guestUser;
 
@@ -46,14 +47,19 @@ public class InternshipUI {
             if(studentUser == 1){
                 clearConsole();
                 displayStudentMenu();
-                inputUserOptions();
+                inputStudentOptions();
+            }
+            if(organizationUser == 1){
+                clearConsole();
+                displayOrganizationMenu();
+                inputOrganizationOptions();
             }
         }
     }
     
     private void displayMainMenu()  {
         System.out.println("--------Internship System--------");
-        System.out.println("\nInput a number based off the choices below");
+        System.out.println("Input a number based off the choices below");
         System.out.println("1. Search Internship\n");
         System.out.println("2. Login\n");
         System.out.println("3. Create an Account\n");
@@ -71,7 +77,18 @@ public class InternshipUI {
         System.out.println("6. Logout");
         // System.out.println("Input 8 to display student's resume");
     }
-    private void inputUserOptions(){
+
+    private void displayOrganizationMenu(){
+        System.out.println("--------Internship System--------");
+        System.out.println("Input a number based off the choices below");
+        System.out.println("1. Search Internship");
+        System.out.println("2. View Internship");
+        System.out.println("3. View my student reviews");
+        System.out.println("4. View my organization reviews");
+        System.out.println("5. Edit organization profile");
+        System.out.println("6. Logout");
+    }
+    private void inputStudentOptions(){
         studentInput = internshipSystem.getUserInput();
         if(studentInput == 6){
             logOff();
@@ -79,12 +96,16 @@ public class InternshipUI {
         else if(studentInput == 4){
             internshipSystem.editStudentProfile();
         }
+        //debugging
         if(studentInput == 8){
             System.out.println(internshipSystem.getResume());
             System.exit(0);
         }
-
     }
+    private void inputOrganizationOptions(){
+        organizationInput = internshipSystem.getUserInput();
+    }
+    
     private void logOff(){
         try {
             System.out.println("\nLogging off...");
@@ -123,7 +144,9 @@ public class InternshipUI {
             internshipSystem.createStudentAccount();
         }
         else if(input == 2){
-
+            organizationUser = 1;
+            guestUser = 0;
+            internshipSystem.createOrganizationAccount();
         }
         else{
             try {

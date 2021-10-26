@@ -14,6 +14,9 @@ public class InternshipSystem {
     private String lastName;
     private String profession;
     private String college;
+    private String organization;
+    private String phoneNum;
+    private String description;
     private ArrayList<String> language;
     private Experience experience;
     private Education education;
@@ -58,6 +61,34 @@ public class InternshipSystem {
             createResume();  
            Student student = new Student(username, password, email, birthday, country, resume, college, language);
 
+    }
+    public void createOrganizationAccount(){
+        clearConsole();
+        displayInternshipLine();
+        System.out.print("Input username: ");
+        username = scanner.nextLine();
+        System.out.print("Input password: ");
+        password = scanner.nextLine();
+        System.out.print("Input email: ");
+        email = scanner.nextLine();
+        System.out.print("Input country: ");
+        country = scanner.nextLine();
+        System.out.print("Organization name: ");
+        organization = scanner.nextLine();
+        System.out.println("");
+        createOrganizationProfile();
+        Organization org = new Organization(username, password, email, country, organization, phoneNum, description);
+    }
+
+    private void createOrganizationProfile(){
+        System.out.println("Create your organization profile that will be displayed to organizations: ");
+        System.out.println("");
+        System.out.println("Organization's name: " + organization);
+        System.out.println("Email: " + email);
+        System.out.print("Phone: ");
+        phoneNum = scanner.nextLine();
+        System.out.print("Description: ");
+        description = scanner.nextLine();
     }
 
     public void editStudentProfile(){
@@ -150,8 +181,8 @@ public class InternshipSystem {
         System.out.print("College: ");
         college = scanner.nextLine();
         System.out.println("");
-
     }
+
 
     private void createResume(){
         System.out.println("Add the following details to your resume:");

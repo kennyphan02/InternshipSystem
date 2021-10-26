@@ -91,6 +91,7 @@ public class Internship {
         {
             return this.job + "|" + this.degree + "|" + "Part time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|";
         }
+
     }
     
 }
