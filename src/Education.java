@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Keeps track of information for user eeducation
@@ -17,7 +16,6 @@ public class Education {
     public Education() {
         this.degrees = new ArrayList<String>();
         this.descriptions = new ArrayList<String>();
-        scanner = new Scanner(System.in);
     }
 
     /**
