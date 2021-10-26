@@ -190,4 +190,38 @@ public class DataWriter extends DataConstants {
         
         return iReviewDetails;
 	}
+    
+    /**
+     * 
+     */
+
+    public static void saveStudentReview() {
+		studentReviews sReviews = studentReviews.getInstance();
+		ArrayList<Review> sReviewList = sReviews.getstudentReviewsList();
+		JSONArray jsonSReviews = new JSONArray();
+		
+		for(int i=0; i< sReviewList.size(); i++) {
+			jsonSReviews.add(getStudentReviewJSON(sReviewList.get(i)));
+		}
+		
+        try (FileWriter file = new FileWriter(STUDENT_REVIEW_FILE_NAME)) {
+ 
+            file.write(jsonSReviews.toJSONString());
+            file.flush();
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public static JSONObject getStudentReviewJSON(Review review) {
+		JSONObject sReviewDetails = new JSONObject();
+		sReviewDetails.put(REVIEW_UUID, review.getId().toString());
+		sReviewDetails.put(REVIEW_TITLE, review.getTitle());
+        sReviewDetails.put(REVIEW_RATING, review.getRating());
+        sReviewDetails.put(REVIEW_COMMENT, review.getComment());
+        
+        return sReviewDetails;
+	}
+    
 }
