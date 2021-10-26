@@ -78,8 +78,19 @@ public class Internship {
         return null;
     }
     public String toString() {
-
-        return "";
+        if(this.fullTime && this.inPerson){
+            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|";  
+        }
+        else if(this.fullTime && !this.inPerson) {
+            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|"; 
+        }
+        else if(!this.fullTime && this.inPerson) {
+            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|"; 
+        }
+        else
+        {
+            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|";
+        }
     }
     
 }
