@@ -24,7 +24,7 @@ public class Student extends User {
      * @param birthday type String
      * @param country type String
      * @param resume type Resume
-     * @param college type ArrayList<String>
+     * @param college type String
      * @param language type ArrayList<String>
      */
     public Student(String user, String pass, String email, String birthday, String country, Resume resume, String college, ArrayList<String> language) {
@@ -47,7 +47,7 @@ public class Student extends User {
      * @param birthday type String
      * @param country type String
      * @param resume type Resume
-     * @param college type ArrayList<String>
+     * @param college type String
      * @param language type ArrayList<String>
      */
     public Student(UUID id, String user, String pass, String email, String birthday, 
