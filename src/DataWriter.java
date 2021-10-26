@@ -80,4 +80,44 @@ public class DataWriter extends DataConstants {
         
         return orgDetails;
 	}
+
+    /**
+     * 
+     */
+    
+    public static void saveInternship() {
+		Internships internships = Internships.getInstance();
+		ArrayList<Internship> internshipList = internships.getInternshipsList();
+		JSONArray jsonInternships = new JSONArray();
+		
+		for(int i=0; i< internshipList.size(); i++) {
+			jsonInternships.add(getInternshipJSON(internshipList.get(i)));
+		}
+		
+        try (FileWriter file = new FileWriter(INTERNSHIP_FILE_NAME)) {
+ 
+            file.write(jsonInternships.toJSONString());
+            file.flush();
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public static JSONObject getInternshipJSON(Internship internship) {
+		JSONObject internshipDetails = new JSONObject();
+		internshipDetails.put(INTERNSHIP_UUID, internship.getid().toString());
+		internshipDetails.put(INTERNSHIP_JOB, internship.getjob());
+        internshipDetails.put(INTERNSHIP_DEGREE, internship.getdegree());
+        internshipDetails.put(INTERNSHIP_FULL_TIME, internship.getfullTime());
+        internshipDetails.put(INTERNSHIP_IN_PERSON, internship.getinPerson());
+        internshipDetails.put(INTERNSHIP_PAY, internship.getpay());
+        internshipDetails.put(INTERNSHIP_HOURS, internship.gethours());
+        internshipDetails.put(INTERNSHIP_ORG_ID, internship.getorganization());
+        internshipDetails.put(INTERNSHIP_EXPERIENCE, internship.getexperience());
+        internshipDetails.put(INTERNSHIP_REVIEWS, internship.getreviews());
+        
+        return internshipDetails;
+	}
+
 }
