@@ -158,4 +158,36 @@ public class DataWriter extends DataConstants {
         return resumeDetails;
 	}
 
+    /**
+     * 
+     */
+
+    public static void saveInternshipReview() {
+		internshipReviews iReviews = internshipReviews.getInstance();
+		ArrayList<Review> iReviewList = iReviews.getinternshipReviewsList();
+		JSONArray jsonIReviews = new JSONArray();
+		
+		for(int i=0; i< iReviewList.size(); i++) {
+			jsonIReviews.add(getInternshipReviewJSON(iReviewList.get(i)));
+		}
+		
+        try (FileWriter file = new FileWriter(INTERNSHIP_REVIEW_FILE_NAME)) {
+ 
+            file.write(jsonIReviews.toJSONString());
+            file.flush();
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
+	
+	public static JSONObject getInternshipReviewJSON(Review review) {
+		JSONObject iReviewDetails = new JSONObject();
+		iReviewDetails.put(REVIEW_UUID, review.getId().toString());
+		iReviewDetails.put(REVIEW_TITLE, review.getTitle());
+        iReviewDetails.put(REVIEW_RATING, review.getRating());
+        iReviewDetails.put(REVIEW_COMMENT, review.getComment());
+        
+        return iReviewDetails;
+	}
 }
