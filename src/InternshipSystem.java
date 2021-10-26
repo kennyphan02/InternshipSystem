@@ -56,7 +56,8 @@ public class InternshipSystem {
             System.out.println("");
             createStudentProfile();
             createResume();  
-            Student student = new Student(username, password, email, birthday, country, resume, college, language);
+           Student student = new Student(username, password, email, birthday, country, resume, college, language);
+
     }
 
     public void editStudentProfile(){
