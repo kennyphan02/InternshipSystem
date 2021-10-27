@@ -10,8 +10,9 @@ public class DataConstants {
     protected static final String INTERNSHIP_PAY = "pay";
     protected static final String INTERNSHIP_HOURS = "hours";
     protected static final String INTERNSHIP_ORG_ID = "organizationUUID";
-    protected static final String INTERNSHIP_EXPERIENCE = "experience";
+    protected static final String INTERNSHIP_SKILLS = "skills";
     protected static final String INTERNSHIP_REVIEWS = "reviews";
+    protected static final String INTERNSHIP_APPLICANTS = "applicants";
 
     protected static final String INTERNSHIP_REVIEW_FILE_NAME = "./src/data/internshipReviews.json";
     protected static final String STUDENT_REVIEW_FILE_NAME = "./src/data/studentReviews.json";
