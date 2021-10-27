@@ -8,14 +8,14 @@ public class Internship {
     private String degree;
     private boolean fullTime;
     private boolean inPerson;
-    private int pay;
+    private String pay;
     private int hours;
-    private Organization organization;
-    private Experience experience;
-    private ArrayList<Review> reviews;
-    private ArrayList<Student> applicants;
+    private UUID orgID;
+    private ArrayList<String> skills;
+    private ArrayList<UUID> reviewIDs;
+    private ArrayList<UUID> applicantIDs;
 
-    public Internship(String job, String degree, boolean fullTime, boolean inPerson, int pay, int hours, Experience experience) {
+    public Internship(String job, String degree, boolean fullTime, boolean inPerson, String pay, int hours, UUID orgID, ArrayList<String> skills) {
         this.id = UUID.randomUUID();
         this.job = job;
         this.degree = degree;
@@ -23,12 +23,13 @@ public class Internship {
         this.inPerson = inPerson;
         this.pay = pay;
         this.hours = hours;
-        this.experience = experience;
-        this.reviews = new ArrayList<Review>();
-        this.applicants = new ArrayList<Student>();
+        this.orgID = orgID;
+        this.skills = skills;
+        this.reviewIDs = new ArrayList<UUID>();
+        this.applicantIDs = new ArrayList<UUID>();
     }
     public Internship(UUID id, String job, String degree, boolean fullTime,
-        boolean inPerson, int pay, int hours, Experience experience, ArrayList<Review> reviews, ArrayList<Student> applicants) {
+        boolean inPerson, String pay, int hours, UUID orgID, ArrayList<String> skills, ArrayList<UUID> reviewIDs, ArrayList<UUID> applicantIDs) {
         this.id = id;
         this.job = job;
         this.degree = degree;
@@ -36,9 +37,10 @@ public class Internship {
         this.inPerson = inPerson;
         this.pay = pay;
         this.hours = hours;
-        this.experience = experience;
-        this.reviews = reviews;
-        this.applicants = applicants;
+        this.orgID = orgID;
+        this.skills = skills;
+        this.reviewIDs = reviewIDs;
+        this.applicantIDs = applicantIDs;
     }
     public UUID getid() {
         return this.id;
@@ -55,41 +57,41 @@ public class Internship {
     public boolean getinPerson() {
         return this.inPerson;
     }
-    public int getpay() {
+    public String getpay() {
         return this.pay;
     }
     public int gethours() {
         return this.hours;
     }
-    public Organization getorganization() {
-        return this.organization;
+    public UUID getorgID() {
+        return this.orgID;
     }
-    public Experience getexperience() {
-        return this.experience;
+    public ArrayList<String> getSkills() {
+        return this.skills;
     }
-    public ArrayList<Review> getreviews() {
-        return this.reviews;
+    public ArrayList<UUID> getreviewIDs() {
+        return this.reviewIDs;
     }
-    public ArrayList<Student> getapplicants() {
-        return this.applicants;
+    public ArrayList<UUID> getapplicantIDs() {
+        return this.applicantIDs;
     }
 
-    public ArrayList<Review> addReview(Review review) {
+    public ArrayList<UUID> addReview(Review review) {
         return null;
     }
     public String toString() {
         if(this.fullTime && this.inPerson){
-            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|";  
+            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|";  
         }
         else if(this.fullTime && !this.inPerson) {
-            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|"; 
+            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|"; 
         }
         else if(!this.fullTime && this.inPerson) {
-            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|"; 
+            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|"; 
         }
         else
         {
-            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.experience + "|";
+            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|";
         }
 
     }

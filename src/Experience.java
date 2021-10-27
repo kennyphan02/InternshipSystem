@@ -18,4 +18,8 @@ public class Experience {
         this.endDate = endDate;
         this.responsibilities = responsibilities;
     }
+
+    public String toString() {
+        return "Title: " + title + "\n" +  "Company: " + company + "\n" + "Start Date: " + startDate + "\n" + "End Date: " + endDate + "\n" + "Responsibilities: " + responsibilities.toString() + "\n";
+    }
 }

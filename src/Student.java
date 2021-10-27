@@ -126,14 +126,6 @@ public class Student extends User {
     public void createStudentProfile() {
         return;
     }
-
-    /**
-     * Prints out
-     */
-    public String toString() {
-        return "";
-    }
-
     /**
      * Gets the UUID for the student.
      * @return The UUID for the student.
@@ -222,4 +214,8 @@ public class Student extends User {
         return reviewIDs;
     }
 
+    public String toString() {
+        return "User Name: " + user + "\n" + "Password: " + pass + "\n" + "Email: " + email + "\n" + "Birthday: " + birthday + "\n"
+            + "Country: " + country + "\n" + "College: " + college + "\n" + "Languages: " + language.toString() + "\n" + "Bookmarked Internships: " + bookmarkIDs.size() + "\n" + "Reviews: " + reviewIDs.size();
+    }
 }

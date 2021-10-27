@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * Keeps track of information for user eeducation
  * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
@@ -13,5 +11,9 @@ public class Education {
         this.uni = uni;
         this.degree = degree;
         this.gradDate = gradDate;
+    }
+
+    public String toString() {
+        return "University: " + uni + "\n" + "Degree: " + degree + "\n" + "Grad Date: " + gradDate + "\n";
     }
 }

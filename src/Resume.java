@@ -43,7 +43,12 @@ public class Resume {
      * To be changed
      */
     public String toString() {
-        return null;
+        String ret = "ID: " + id + "\n" + "Skills: " + skills.toString() + "\n" + "\n" + "Experience: " + "\n";
+        for(int i = 0; i < experience.size(); i++) {
+            ret += experience.get(i).toString() + "\n";
+        }
+        ret += "Education: " + "\n" + education.toString() + "\n" + "Language(s): " + language.toString() + "\n";
+        return ret;
     }
     
 }
