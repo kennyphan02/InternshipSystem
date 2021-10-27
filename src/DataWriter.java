@@ -113,9 +113,10 @@ public class DataWriter extends DataConstants {
         internshipDetails.put(INTERNSHIP_IN_PERSON, internship.getinPerson());
         internshipDetails.put(INTERNSHIP_PAY, internship.getpay());
         internshipDetails.put(INTERNSHIP_HOURS, internship.gethours());
-        internshipDetails.put(INTERNSHIP_ORG_ID, internship.getorganization());
-        internshipDetails.put(INTERNSHIP_EXPERIENCE, internship.getexperience());
-        internshipDetails.put(INTERNSHIP_REVIEWS, internship.getreviews());
+        internshipDetails.put(INTERNSHIP_ORG_ID, internship.getorgID());
+        internshipDetails.put(INTERNSHIP_SKILLS, internship.getSkills());
+        internshipDetails.put(INTERNSHIP_REVIEWS, internship.getreviewIDs());
+        internshipDetails.put(INTERNSHIP_APPLICANTS, internship.getapplicantIDs());
         
         return internshipDetails;
 	}
