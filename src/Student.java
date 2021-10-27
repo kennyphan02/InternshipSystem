@@ -12,8 +12,8 @@ public class Student extends User {
     private Resume resume;
     private String college;
     private ArrayList<String> language;
-    private ArrayList<Internship> bookmarks;
-    private ArrayList<Review> reviews;
+    private ArrayList<UUID> bookmarkIDs;
+    private ArrayList<UUID> reviewIDs;
 
        /** 
      * Default constructor that initalizes the private variables in the Student class. Bookmarks are initalized to an arraylist of internships.
@@ -51,7 +51,7 @@ public class Student extends User {
      * @param language type ArrayList<String>
      */
     public Student(UUID id, String user, String pass, String email, String birthday, 
-            String country, Resume resume, String college, ArrayList<String> language, ArrayList<Internship> bookmarks, ArrayList<Review> reviews) {
+            String country, Resume resume, String college, ArrayList<String> language, ArrayList<UUID> bookmarks, ArrayList<UUID> reviews) {
         this.id = UUID.randomUUID();
         this.user = user;
         this.pass = pass;
@@ -61,8 +61,8 @@ public class Student extends User {
         this.resume = resume;
         this.college = college;
         this.language = language;
-        this.bookmarks = bookmarks;
-        this.reviews = reviews;
+        this.bookmarkIDs = bookmarks;
+        this.reviewIDs = reviews;
     }
 
     /**
@@ -126,14 +126,6 @@ public class Student extends User {
     public void createStudentProfile() {
         return;
     }
-
-    /**
-     * Prints out
-     */
-    public String toString() {
-        return "";
-    }
-
     /**
      * Gets the UUID for the student.
      * @return The UUID for the student.
@@ -210,16 +202,20 @@ public class Student extends User {
      * Gets the internships the student has bookmarked.
      * @return The internships the student has bookmarked.
      */
-    public ArrayList<Internship> getBookmarks() {
-        return bookmarks;
+    public ArrayList<UUID> getBookmarks() {
+        return bookmarkIDs;
     }
 
     /**
      * Gets the reviews of the student left by employers.
      * @return The reviews of the student left by employers.
      */
-    public ArrayList<Review> getReview() {
-        return reviews;
+    public ArrayList<UUID> getReview() {
+        return reviewIDs;
     }
 
+    public String toString() {
+        return "User Name: " + user + "\n" + "Password: " + pass + "\n" + "Email: " + email + "\n" + "Birthday: " + birthday + "\n"
+            + "Country: " + country + "\n" + "College: " + college + "\n" + "Languages: " + language.toString() + "\n" + "Bookmarked Internships: " + bookmarkIDs.size() + "\n" + "Reviews: " + reviewIDs.size();
+    }
 }

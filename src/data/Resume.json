@@ -1,43 +1,31 @@
 [
     {
         "UUID":"58612df9-ffaa-4715-b245-14d3bc04b7b5",
-        "firstName":"Kenny",
-        "lastName":"Phan", 
-        "profession": "Student",
-        "email:": "kennyphan@gmail.com",
         "skills": ["Java", "HTML", "C++"],
-        "experience": ["Creator of Java as a language", "Interned for PayPal in finance and accounting"],
-        "education": ["High School", "Student at University of South Carolina"],
+        "experience": [{"title":"App Dev Intern","company":"MegaCorp Systems","startDate":"May 2020","endDate":"Aug 2020","responsibilities":["Wrote Java backend code for a production web application","Interacted with a team SCRUM board"]},
+            {"title":"IT Assistant","company":"TechWhiz Solutions","startDate":"May 2021","endDate":"Aug 2021","responsibilities":["Interacted with customers by phone on a daily basis","Provided timely tech support for a variety of software and hardware"]}],
+        "education": {"uni":"UofSC","degree":"B.S. Computer Science","gradDate":"2023"},
         "language": ["English", "French"]
     },{
         "UUID":"555bfbed-16d3-4bcd-bc6a-13fc9f7c7871",
-        "firstName":"Thomas",
-        "lastName":"Vu",
-        "profession": "Student",
-        "email:": "thomasvu@email.com",
         "skills": ["Java", "C++", "Python"],
-        "experience": ["Intern software engineer at Citrix"],
-        "education": ["High School", "Student at University of South Carolina"],
+        "experience": [{"title":"App Dev Intern","company":"MegaCorp Systems","startDate":"May 2020","endDate":"Aug 2020","responsibilities":["Wrote Java backend code for a production web application","Interacted with a team SCRUM board"]},
+            {"title":"IT Assistant","company":"TechWhiz Solutions","startDate":"May 2021","endDate":"Aug 2021","responsibilities":["Interacted with customers by phone on a daily basis","Provided timely tech support for a variety of software and hardware"]}],
+        "education": {"uni":"UofSC","degree":"B.S. Computer Science","gradDate":"2023"},
         "language": ["English", "Russian", "Spanish"]
     },{
         "UUID":"55f46117-a90a-482c-9ef4-eac482ed89be",
-        "firstName":"Danny",
-        "lastName":"Nguyen",
-        "profession": "Student",
-        "email:": "dannyn4@email.com",
         "skills": ["Java", "bindary code"],
-        "experience": ["Analyst at Goldman Sachs", "Interned as a journalist at the Dow Jones News Fund"],
-        "education": ["High School", "Student at University of South Carolina"],
+        "experience": [{"title":"App Dev Intern","company":"MegaCorp Systems","startDate":"May 2020","endDate":"Aug 2020","responsibilities":["Wrote Java backend code for a production web application","Interacted with a team SCRUM board"]},
+            {"title":"IT Assistant","company":"TechWhiz Solutions","startDate":"May 2021","endDate":"Aug 2021","responsibilities":["Interacted with customers by phone on a daily basis","Provided timely tech support for a variety of software and hardware"]}],
+        "education": {"uni":"UofSC","degree":"B.S. Computer Science","gradDate":"2023"},
         "language": ["English", "Swahili", "Arabic"]
     },{
         "UUID":"98700033-2f9d-41a8-a4b7-9df6c45f53f5",
-        "firstName":"Danai",
-        "lastName":"Angelidis",
-        "profession": "Student",
-        "email:": "danaiagg@email.com",
         "skills": ["Java", "HTML", "JustBasic"],
-        "experience": ["Aerospace intern at Brooke Owens Fellowship"],
-        "education": ["High School", "Student at University of South Carolina"],
+        "experience": [{"title":"App Dev Intern","company":"MegaCorp Systems","startDate":"May 2020","endDate":"Aug 2020","responsibilities":["Wrote Java backend code for a production web application","Interacted with a team SCRUM board"]},
+            {"title":"IT Assistant","company":"TechWhiz Solutions","startDate":"May 2021","endDate":"Aug 2021","responsibilities":["Interacted with customers by phone on a daily basis","Provided timely tech support for a variety of software and hardware"]}],
+        "education": {"uni":"UofSC","degree":"B.S. Computer Science","gradDate":"2023"},
         "language": ["English", "Greek", "French", "Spanish"]
     }
 ]

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Resumes {
 
@@ -20,8 +21,13 @@ public class Resumes {
         return resumesList;
     }
 
-    public Resume getResume(int index) {
-        return resumesList.get(index);
+    public Resume getResume(UUID target) {
+        for (int i = 0; i < resumesList.size(); i++) {
+            if(resumesList.get(i).getid() == target) {
+                return resumesList.get(i);
+            }
+        }
+        return null;
     }
 
     public void addResume(Resume r) {

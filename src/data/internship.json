@@ -8,29 +8,32 @@
         "pay": "TBD",
         "hours": 40,
         "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
-        "experience": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
-        "reviews": ["d7ccec7d-d47f-479d-b445-d27ccbc03a42"]
+        "skills": ["Knowledge of the syntax of languages such as Java, C/C++ or Python."],
+        "reviews": ["d7ccec7d-d47f-479d-b445-d27ccbc03a42"],
+        "applicants":["590fdc16-3626-49f8-a855-baccd3aba799"]
     },{
         "UUID":"a33421b9-e82a-465c-8aa5-a85b8de7db24",
         "job": "Amazon Operations Finance Rotational Program Internship",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
-        "inperson": false,
+        "inPerson": false,
         "pay": "TBD",
         "hours": 10,
         "organizationUUID": "b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
-        "experience": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
-        "reviews": "46a4ef90-a7ed-4281-8154-99ffb426fd98"
+        "skills": ["Understanding of basic business, accounting, and finance concepts, and a working knowledge of Excel and SQL."],
+        "reviews": ["46a4ef90-a7ed-4281-8154-99ffb426fd98"],
+        "applicants":["2e8bc9a2-2a69-498d-b12a-28b4df5343c4","aeca4c82-e986-4f04-a08a-34328fd8d5d1"]
     },{
         "UUID":"230d04f2-389b-484b-bb64-db73b08b398a",
         "job": "Site Reliability Engineering: Summer Intern Opportunities",
         "degree": "Currently enrolled in a Bachelor’s or Master’s Degree in Computer Science, Computer Engineering, or related field at time of application.",
         "fullTime": false,
-        "inperson": true,
+        "inPerson": true,
         "pay": "$20/hr",
         "hours": 25,
-        "organizationID": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
-        "experience": ["One year of programming experience in an object-oriented language."],
-        "reviews": ["2ddc2e1f-795f-45c4-9202-8ba6a28c8082"]
+        "organizationUUID": "806c9221-a08e-400a-8d9d-8e1ba03a6be5",
+        "skills": ["One year of programming experience in an object-oriented language."],
+        "reviews": ["2ddc2e1f-795f-45c4-9202-8ba6a28c8082"],
+        "applicants":["9e2a6a20-0ed4-4e21-bfcd-0db2c302eee4"]
     }
 ]
