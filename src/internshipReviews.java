@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class internshipReviews {
 
@@ -20,8 +21,13 @@ public class internshipReviews {
         return internshipReviewsList;
     }
 
-    public Review getReview(int index) {
-        return internshipReviewsList.get(index);
+    public Review getReview(UUID target) {
+        for (int i = 0; i < internshipReviewsList.size(); i++) {
+            if(internshipReviewsList.get(i).getId() == target) {
+                return internshipReviewsList.get(i);
+            }
+        }
+        return null;
     }
 
     public void addReview(Review r) {
