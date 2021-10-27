@@ -11,6 +11,7 @@ public class InternshipUI {
     private int guestInput;
     private int guestUser;
 
+    
     InternshipUI()  {
         scanner = new Scanner(System.in);
         internshipSystem = new InternshipSystem();
@@ -19,6 +20,9 @@ public class InternshipUI {
         guestUser = 1;
     }
 
+    /**
+     * Runs 
+     */
     public void run() {
         while(true){
             if(studentUser == 0 && organizationUser == 0){
@@ -57,6 +61,9 @@ public class InternshipUI {
         }
     }
     
+    /**
+     * Prints out main menu. 
+     */
     private void displayMainMenu()  {
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
@@ -66,6 +73,9 @@ public class InternshipUI {
         System.out.println("4. Quit\n");
     }
 
+    /**
+     * Prints out student menu. 
+     */
     private void displayStudentMenu(){
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
@@ -78,6 +88,9 @@ public class InternshipUI {
         // System.out.println("Input 8 to display student's resume");
     }
 
+    /**
+     * Prints out organization menu. 
+     */
     private void displayOrganizationMenu(){
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
@@ -88,6 +101,10 @@ public class InternshipUI {
         System.out.println("5. Edit organization profile");
         System.out.println("6. Logout");
     }
+
+    /**
+     * 
+     */
     private void inputStudentOptions(){
         studentInput = internshipSystem.getUserInput();
         if(studentInput == 6){
@@ -120,11 +137,17 @@ public class InternshipUI {
         clearConsole();
     }
 
+    /**
+     * Clears console. 
+     */
     private void clearConsole(){
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
+    /**
+     * 
+     */
     private void searchInternship(){
         // internshipSystem.searchInternship();
     }
