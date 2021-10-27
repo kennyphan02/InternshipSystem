@@ -147,11 +147,7 @@ public class DataWriter extends DataConstants {
 	public static JSONObject getResumeJSON(Resume resume) {
 		JSONObject resumeDetails = new JSONObject();
 		resumeDetails.put(RESUME_UUID, resume.getid().toString());
-		resumeDetails.put(RESUME_FIRST_NAME, resume.getfirstName());
-        resumeDetails.put(RESUME_LAST_NAME, resume.getlastName());
-        resumeDetails.put(RESUME_PROFESSION, resume.getprofession());
-        resumeDetails.put(RESUME_EMAIL, resume.getemail());
-        resumeDetails.put(RESUME_SKILLS, resume.getskills());
+        resumeDetails.put(RESUME_SKILLS, resume.getSkills());
         resumeDetails.put(RESUME_EDUCATION, resume.geteducation());
         resumeDetails.put(RESUME_EXPERIENCE, resume.getexperience());
         resumeDetails.put(RESUME_LANGUAGES, resume.getlanguage());
