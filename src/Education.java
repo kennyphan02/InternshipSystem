@@ -14,7 +14,10 @@ public class Education {
         this.gradDate = gradDate;
     }
 
-    //Returns all instance values as strings for the instance of Education.
+    /**
+     * Returns all instance values
+     * @return instance values for education
+     */
     public String toString() {
         return "University: " + uni + "\n" + "Degree: " + degree + "\n" + "Grad Date: " + gradDate + "\n";
     }

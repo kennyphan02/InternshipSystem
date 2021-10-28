@@ -20,7 +20,10 @@ public class Experience {
         this.responsibilities = responsibilities;
     }
 
-    //Returns all the instance values as strings for the instance of Experience.
+    /**
+     * Returns all instance values.
+     * @return instance values for experience
+     */
     public String toString() {
         return "Title: " + title + "\n" +  "Company: " + company + "\n" + "Start Date: " + startDate + "\n" + "End Date: " + endDate + "\n" + "Responsibilities: " + responsibilities.toString() + "\n";
     }
