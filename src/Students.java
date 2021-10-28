@@ -63,7 +63,7 @@ public class Students {
      * Sends data from singletons to DataWriter.java.
      */
     public void logout() {
-
+        DataWriter.saveStudents();
     }
     
 }
