@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Students {
 
@@ -20,8 +21,13 @@ public class Students {
         return studentsList;
     }
 
-    public Student getStudent(int index) {
-        return studentsList.get(index);
+    public Student getStudent(UUID target) {
+        for (int i = 0; i < studentsList.size(); i++) {
+            if(studentsList.get(i).getId() == target) {
+                return studentsList.get(i);
+            }
+        }
+        return null;
     }
 
     public void addStudent(Student s) {
