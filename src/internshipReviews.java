@@ -39,7 +39,7 @@ public class internshipReviews {
     }
 
     public void logout() {
-
+        DataWriter.saveInternshipReview();
     }
     
 }

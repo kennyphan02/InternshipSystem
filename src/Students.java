@@ -39,7 +39,7 @@ public class Students {
     }
 
     public void logout() {
-
+        DataWriter.saveStudents();
     }
     
 }

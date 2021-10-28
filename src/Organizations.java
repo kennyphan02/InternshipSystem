@@ -39,7 +39,7 @@ public class Organizations {
     }
 
     public void logout() {
-
+        DataWriter.saveOrganization();
     }
     
 }
