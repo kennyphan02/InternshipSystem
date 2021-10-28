@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Organizations {
 
@@ -20,8 +21,13 @@ public class Organizations {
         return organizationsList;
     }
 
-    public Organization getOrganization(int index) {
-        return organizationsList.get(index);
+    public Organization getOrganization(UUID target) {
+        for (int i = 0; i < organizationsList.size(); i++) {
+            if(organizationsList.get(i).getId() == target) {
+                return organizationsList.get(i);
+            }
+        }
+        return null;
     }
 
     public void addOrganization(Organization o) {
