@@ -149,6 +149,10 @@ public class Internship {
         return this.reviewIDs;
     }
 
+    public void addID(UUID id){
+        this.applicantIDs.add(id);
+    }
+
     /**
      * gets the applicants IDs.
      * @return the applicants IDs. 
