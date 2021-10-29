@@ -144,9 +144,6 @@ public class InternshipSystem {
         resume = new Resume(skills, experiences, ed, languages);
         // studentUser.getResume().getid() = resume.getid();
         resumes.addResume(resume);
-
-
-
     }
 
     public void printResume(){
@@ -163,6 +160,73 @@ public class InternshipSystem {
             System.out.println("Error");
         }
     }
+
+
+    public void searchInternship(){
+        System.out.println("Search by Filter. Input number next to filter to change it:\n");
+        System.out.println("1. Job: ");
+        System.out.println("2. Degree: ");
+        System.out.println("3. Full time or In Person: ");
+        System.out.println("4. Pay: ");
+        System.out.println("5. Hours: ");
+        System.out.println("6. Skills: ");
+        int filter = getUserInput();
+        if(filter == 6){
+            ArrayList<String> skills = new ArrayList<String>();
+            System.out.println("\n Input skills. Press q to stop at any point: \n");
+            while(true){
+                String skill = scanner.nextLine();
+                if(skill.equals("q")){
+                    break;
+                }
+                else
+                {
+                    skills.add(skill);
+                }
+            }
+            System.out.println("\n Job Postings that contain " + skills);
+            System.out.println("\n********************\n");
+
+            int count = 1;
+            for(Internship internship : internships.getInternshipsList()){
+                if(internship.getSkills().get(0).equals(skills.get(0))){
+                    System.out.println(count + ".");
+                    System.out.println(internships.getInternship(internship.getid()) + "\n");
+                    count++;
+                }
+            }
+            System.out.println("Input number next to the job listing to apply: ");
+            int number = getUserInput();
+            if(number == 1){
+                try {
+                    System.out.println("Applied to Software Development Engineer Internship!");
+                    TimeUnit.MILLISECONDS.sleep(3000); 
+                    
+                } catch (Exception e) {
+                    System.out.println("Error");
+                }
+            }
+            else if(number == 2){
+            }
+            try {
+                System.out.println("Applied to Amazon Operations Finance Rotational Program Internship!");
+                TimeUnit.MILLISECONDS.sleep(3000); 
+                
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+            }
+        }
+
+        public void viewMyInternship(){
+            if(organizationUser!=null){
+                
+            }
+        }
+    
+
+
+
 
 
     public void createStudentAccount(){
@@ -387,8 +451,6 @@ public class InternshipSystem {
         int userInput = Integer.parseInt(input);
         return userInput;
     }
-
-
 
 
 
