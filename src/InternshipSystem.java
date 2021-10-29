@@ -1,9 +1,15 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class InternshipSystem {
     private Internships internships;
+    private Students students;
+    private Organizations organizations;
+    private Resumes resumes;
     private Scanner scanner;
     private String username;
     private String password;
@@ -12,7 +18,6 @@ public class InternshipSystem {
     private String country;
     private String firstName;
     private String lastName;
-    private String profession;
     private String college;
     private String organization;
     private String phoneNum;
@@ -21,26 +26,144 @@ public class InternshipSystem {
     private Experience experience;
     private Education education;
     private Resume resume;
+    private Student studentUser;
+    private Organization organizationUser;
 
 
     public InternshipSystem(){
-        // internshipList = InternshipList.getInstance();
         // userList = UserList.getInstance();
+        internships = Internships.getInstance();
+        organizations = Organizations.getInstance();
+        students = Students.getInstance();
+        resumes = Resumes.getInstance();
         scanner = new Scanner(System.in);
-        experience = new Experience();
-        education = new Education();
+        // experience = new Experience();
+        // education = new Education();
         language = new ArrayList<String>();
     }
     
-    public void login(){
-        clearConsole();
-        displayInternshipLine();
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.println("");
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+    public Student getStudent(){
+        return studentUser;
     }
+    public Organization getOrganization(){
+        return organizationUser;
+    }
+
+    public boolean login(String username, String password){
+        for(Student student : students.getStudentsList()) {
+            if(student.getUser().equals(username) && student.getPassword().equals(password)){
+                studentUser = students.getStudent(student.getId());
+                return true;
+            }
+        }
+        for(Organization organization : organizations.getOrganizationsList()) {
+            if(organization.getUser().equals(username) && organization.getPassword().equals(password)){
+                organizationUser = organizations.getOrganization(organization.getId());
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void addResume(){
+        displayInternshipLine();
+        System.out.println("Add the following details to your resume: ");
+        System.out.println("Input q to stop at any time");
+        System.out.println("Skills:");
+        ArrayList<String> skills = new ArrayList<String>();
+        while(true){
+            String skill = scanner.nextLine();
+            if(skill.equals("q")){
+                break;
+            }
+            else
+            {
+                skills.add(skill);
+            }
+        }
+        System.out.println("");
+        System.out.println("Input education:\n");
+        System.out.print("College: ");
+        college = scanner.nextLine();
+        System.out.print("Degree: ");
+        String degree = scanner.nextLine();
+        System.out.print("Expected Graduation Date: ");
+        String gradDate = scanner.nextLine();
+        Education ed = new Education(college,degree,gradDate);
+
+        System.out.print("Input languages that you can speak. Press q at any time to quit\n");
+        ArrayList<String> languages = new ArrayList<String>();
+        while(true){
+            String language = scanner.nextLine();
+            if(language.equals("q")){
+                break;
+            }
+            else
+            {
+                languages.add(language);
+            }
+        }
+
+        ArrayList<Experience> experiences = new ArrayList<Experience>();
+
+        System.out.println("\nInput experience:\n");
+        while(true){
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
+            System.out.print("      Company: ");
+            String company = scanner.nextLine();
+            System.out.print("      Start date: ");
+            String startDate = scanner.nextLine();
+            System.out.print("      End date: ");
+            String endDate = scanner.nextLine();
+
+            ArrayList<String> descriptions = new ArrayList<String>();
+            System.out.println("\nInput descriptions for experiences. Press q at any time to quit\n");
+            while(true){
+                String description = scanner.nextLine();
+                if(description.equals("q")){
+                    break;
+                }
+                else
+                {
+                    descriptions.add(description);
+                }
+            }
+            Experience exp = new Experience(title, company, startDate, endDate, descriptions);
+            experiences.add(exp);
+            System.out.println("\n Add more experiences? input y to continue or n to stop\n");
+            String userCondition = scanner.nextLine();
+            if(userCondition.equals("y"))
+            {
+                continue;
+            }
+            if(userCondition.equals("n")){
+                break;
+            }
+    }
+        resume = new Resume(skills, experiences, ed, languages);
+        // studentUser.getResume().getid() = resume.getid();
+        resumes.addResume(resume);
+
+
+
+    }
+
+    public void printResume(){
+        displayInternshipLine();
+        try {
+            System.out.println("\nPrinting resume to text file...");
+            TimeUnit.MILLISECONDS.sleep(10000); 
+            FileWriter file = new FileWriter(studentUser.getUser() + "Resume.txt");
+            PrintWriter output = new PrintWriter(file);
+            output.println(resume.toString());
+            output.close();
+            
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
+    }
+
 
     public void createStudentAccount(){
             clearConsole();
@@ -190,12 +313,12 @@ public class InternshipSystem {
         System.out.println("First Name: " + firstName);
         System.out.println("Last name: " + lastName);
         System.out.print("Profession: ");
-        profession = scanner.nextLine();
+        // profession = scanner.nextLine();
         System.out.println("Email: " + email);
         System.out.println("");
         createExperiences();
         createEducation();
-        resume = new Resume(firstName, lastName, profession, email, experience, education, language);
+        // resume = new Resume(firstName, lastName, profession, email, experience, education, language);
     }
 
     private void createLanguages(){
@@ -223,10 +346,10 @@ public class InternshipSystem {
         while(count){
             System.out.print("Input title:  ");
             String title = scanner.nextLine();
-            experience.addTitle(title);
+            // experience.addTitle(title);
             System.out.print("Input description: ");
             String description = scanner.nextLine();
-            experience.addDescription(description);
+            // experience.addDescription(description);
             System.out.print("Input quit? type quit to quit or no to keep inputting experiences: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
@@ -245,10 +368,10 @@ public class InternshipSystem {
         while(count){
             System.out.print("Input degree:  ");
             String degree = scanner.nextLine();
-            education.addDegree(degree);
+            // education.addDegree(degree);
             System.out.print("Input description: ");
             String description = scanner.nextLine();
-            education.addDescription(description);
+            // education.addDescription(description);
             System.out.print("Input quit? type quit to quit or no to ke ep inputting education: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
