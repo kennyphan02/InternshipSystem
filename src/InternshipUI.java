@@ -96,7 +96,7 @@ public class InternshipUI {
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
         System.out.println("1. Search Internship");
-        System.out.println("2. View Internship");
+        System.out.println("2. View My Internship");
         System.out.println("3. View my student reviews");
         System.out.println("4. View my organization reviews");
         System.out.println("5. Edit organization profile");
@@ -133,6 +133,9 @@ public class InternshipUI {
     }
     private void inputOrganizationOptions(){
         organizationInput = internshipSystem.getUserInput();
+        if(organizationInput == 2){
+            viewMyInternship();
+        }
         if(organizationInput == 6){
             logOff();
         }
@@ -142,6 +145,9 @@ public class InternshipUI {
         internshipSystem.addResume();
 
     
+    }
+    private void viewMyInternship(){
+        internshipSystem.viewMyInternship();
     }
     private void printResume(){
         clearConsole();
