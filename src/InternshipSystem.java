@@ -185,44 +185,38 @@ public class InternshipSystem {
                 }
             }
             System.out.println("\n Job Postings that contain " + skills);
+            ArrayList<Internship> filteredInternships = new ArrayList<Internship>();
             System.out.println("\n********************\n");
+            int counter = 0;
 
-            int count = 1;
             for(Internship internship : internships.getInternshipsList()){
-                if(internship.getSkills().get(0).equals(skills.get(0))){
-                    System.out.println(count + ".");
-                    System.out.println(internships.getInternship(internship.getid()) + "\n");
-                    count++;
-                }
+                for(int i = 0; i < internship.getSkills().size(); i++){
+                    if(internship.getSkills().get(i).equals(skills.get(counter))){
+                        filteredInternships.add(internships.getInternship(internship.getid()));
+                    }
+                }   
             }
+
+            for(int i= 0; i < filteredInternships.size(); i++){
+                System.out.println(i+1 + ".");
+                System.out.println(filteredInternships.get(i));
+                System.out.println("\n");
+            }
+            
+
+
             System.out.println("Input number next to the job listing to apply: ");
             int number = getUserInput();
-            if(number == 1){
-                try {
-                    System.out.println("Applied to Software Development Engineer Internship!");
-                    TimeUnit.MILLISECONDS.sleep(3000); 
-                    
-                } catch (Exception e) {
-                    System.out.println("Error");
-                }
+            filteredInternships.get(number-1).addID(studentUser.getId());
+            internships.logout();
             }
-            else if(number == 2){
-            }
-            try {
-                System.out.println("Applied to Amazon Operations Finance Rotational Program Internship!");
-                TimeUnit.MILLISECONDS.sleep(3000); 
-                
-            } catch (Exception e) {
-                System.out.println("Error");
-            }
-            }
-        }
+    }
 
-        public void viewMyInternship(){
-            if(organizationUser!=null){
-                
-            }
-        }
+    public void viewMyInternship(){
+
+    }
+
+
     
 
 
