@@ -16,7 +16,7 @@ public class Students {
     }
 
     /**
-     *Checks for instance of student.java exists. Returns instance if exists, contructs one otherwise.
+     *Checks if instance of student.java exists. Returns instance if exists, contructs one otherwise.
      * @return instance of student.java if it exists
      * @see Students#Students()
      */
@@ -59,9 +59,7 @@ public class Students {
         studentsList.remove(s);
     }
 
-    /**
-     * Sends data from singletons to DataWriter.java.
-     */
+    //Sends data from singletons to DataWriter.
     public void logout() {
         DataWriter.saveStudents();
     }
