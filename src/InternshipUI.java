@@ -52,7 +52,6 @@ public class InternshipUI {
                 clearConsole();
                 displayStudentMenu();
                 inputStudentOptions();
-                System.out.println("testerino");
             }
             if(organizationUser == 1){
                 clearConsole();
@@ -145,7 +144,7 @@ public class InternshipUI {
     private void logOff(){
         try {
             System.out.println("\nLogging off...");
-            TimeUnit.MILLISECONDS.sleep(1000); 
+            TimeUnit.MILLISECONDS.sleep(300); 
             
         } catch (Exception e) {
             System.out.println("Error");
