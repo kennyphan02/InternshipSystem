@@ -52,7 +52,7 @@ public class Student extends User {
      */
     public Student(UUID id, String user, String pass, String email, String birthday, 
             String country, Resume resume, String college, ArrayList<String> language, ArrayList<UUID> bookmarks, ArrayList<UUID> reviews) {
-        this.id = UUID.randomUUID();
+        this.id = id;
         this.user = user;
         this.pass = pass;
         this.email = email;
