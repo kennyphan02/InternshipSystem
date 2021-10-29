@@ -40,7 +40,6 @@ public class Organizations {
      * @param target
      * @return selected organization
      */
-    public Student
     public Organization getOrganization(UUID target) {
         for (int i = 0; i < organizationsList.size(); i++) {
             if(organizationsList.get(i).getId() == target) {

@@ -171,17 +171,17 @@ public class Internship {
      */
     public String toString() {
         if(this.fullTime && this.inPerson){
-            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|";  
+            return "Job:" + this.job + "\nDegree: " + this.degree + "\nFull time: yes " + "\nIn Person: yes" + "\nPay: " + this.pay + "\nHours: " + this.hours + "\nSkills: " + this.skills;  
         }
         else if(this.fullTime && !this.inPerson) {
-            return this.job + "|" + this.degree + "|" + "Full Time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|"; 
+            return "Job:" + this.job + "\nDegree: " + this.degree + "\nFull time: yes " + "\nIn Person: no" + "\nPay: " + this.pay + "\nHours: " + this.hours + "\nSkills: " + this.skills;  
         }
         else if(!this.fullTime && this.inPerson) {
-            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "In Person" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|"; 
+            return "Job:" + this.job + "\nDegree: " + this.degree + "\nFull time: no " + "\nIn Person: yes" + "\nPay: " + this.pay + "\nHours: " + this.hours + "\nSkills: " + this.skills;  
         }
         else
         {
-            return this.job + "|" + this.degree + "|" + "Part time" + "|" + "Remote" + "|" + this.pay + "|" + this.hours + "|" + this.skills + "|";
+            return "Job:" + this.job + "\nDegree: " + this.degree + "\nFull time: no " + "\nIn Person: no" + "\nPay: " + this.pay + "\nHours: " + this.hours + "\nSkills: " + this.skills;
         }
 
     }

@@ -108,7 +108,10 @@ public class InternshipUI {
      */
     private void inputStudentOptions(){
         studentInput = internshipSystem.getUserInput();
-        if(studentInput == 2){
+        if(studentInput == 1){
+            searchInternship();
+        }
+        else if(studentInput == 2){
             addResume();
         }
         else if(studentInput == 3){
@@ -130,6 +133,9 @@ public class InternshipUI {
     }
     private void inputOrganizationOptions(){
         organizationInput = internshipSystem.getUserInput();
+        if(organizationInput == 6){
+            logOff();
+        }
     }
     private void addResume(){
         clearConsole();
@@ -167,7 +173,7 @@ public class InternshipUI {
      * 
      */
     private void searchInternship(){
-        // internshipSystem.searchInternship();
+        internshipSystem.searchInternship();
     }
 
     private void login() {
