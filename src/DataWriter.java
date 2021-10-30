@@ -1,6 +1,8 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.UUID;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -120,8 +122,10 @@ public class DataWriter extends DataConstants {
         internshipDetails.put(INTERNSHIP_HOURS, internship.gethours());
         internshipDetails.put(INTERNSHIP_ORG_ID, internship.getorgID());
         internshipDetails.put(INTERNSHIP_SKILLS, internship.getSkills());
-        internshipDetails.put(INTERNSHIP_REVIEWS, internship.getreviewIDs());
-        internshipDetails.put(INTERNSHIP_APPLICANTS, internship.getapplicantIDs());
+        ArrayList<String> reviewIdStr = UUIDArrtoStrArr(internship.getreviewIDs());
+        internshipDetails.put(INTERNSHIP_REVIEWS, reviewIdStr);
+        ArrayList<String> applicantIdStr = UUIDArrtoStrArr(internship.getapplicantIDs());
+        internshipDetails.put(INTERNSHIP_APPLICANTS, applicantIdStr);
         
         return internshipDetails;
 	}
@@ -226,4 +230,11 @@ public class DataWriter extends DataConstants {
         return sReviewDetails;
 	}
     
+    private static ArrayList<String> UUIDArrtoStrArr(ArrayList<UUID> arr) {
+        ArrayList<String> ret = new ArrayList<String>();
+        for(int i = 0; i < arr.size(); i++) {
+            ret.add(arr.get(i).toString());
+        }
+        return ret;
+    }
 }
