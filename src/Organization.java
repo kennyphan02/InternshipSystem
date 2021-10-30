@@ -89,7 +89,7 @@ public class Organization extends User{
      * prints out. 
      */
     public String toString() {
-        return "";
+        return "User: " + this.user + "\nPass: " + this.pass + "\nEmail: " + this.email + "\nCountry: " + this.country + "\nOrgName: " + this.orgName + "\nPhoneNum: " + this.phoneNum + "\nDescription: " + this.description + "\nInternships: " + internships;
     }
 
     /**

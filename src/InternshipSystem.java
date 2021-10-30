@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.UUID;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.io.FileWriter;
@@ -41,7 +42,7 @@ public class InternshipSystem {
         // education = new Education();
         language = new ArrayList<String>();
     }
-    
+
     public Student getStudent(){
         return studentUser;
     }
@@ -64,6 +65,10 @@ public class InternshipSystem {
         }
 
         return false;
+    }
+    public void debug(){
+        System.out.println(organizationUser);
+        String debug = scanner.nextLine();
     }
 
     public void addResume(){
@@ -213,16 +218,36 @@ public class InternshipSystem {
     }
 
     public void viewMyInternship(){
+        
+        if(organizationUser != null){
+            // 1st for loop (loops through each internship)
+            for(int i = 0; i < organizationUser.getInternships().size(); i++) {
+                Student applicant;
+                System.out.println(i+1 + ".");
+                System.out.println(organizationUser.getInternships().get(i));
+                System.out.println("Applicants: ");
+                // 2nd for loop iterates through every user id
+                for(int j = 0; j < organizationUser.getInternships().get(i).getapplicantIDs().size(); j++){
+                    for(Student student: students.getStudentsList()){
+                        // System.out.println("Student id: " + student.getId());
+                        // System.out.println("Applicant id: " + organizationUser.getInternships().get(i).getapplicantIDs().get(j));
+                        if(student.getId().equals(organizationUser.getInternships().get(i).getapplicantIDs().get(j))){
+                            applicant = students.getStudent(student.getId());
+                            System.out.println(applicant.getUser());
+                        }
+                    }
+                }
+                System.out.println("\n");
+            }
+            String debug = scanner.nextLine();
+
+
+        }
 
     }
 
 
     
-
-
-
-
-
     public void createStudentAccount(){
             clearConsole();
             displayInternshipLine();
