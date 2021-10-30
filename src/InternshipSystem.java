@@ -49,6 +49,11 @@ public class InternshipSystem {
         return organizationUser;
     }
 
+    public void debugger(){
+        System.out.println(students.getStudentsList());
+        System.out.println(students.getStudentsList().get(0).getId());
+    }
+
     public boolean login(String username, String password){
         for(Student student : students.getStudentsList()) {
             if(student.getUser().equals(username) && student.getPassword().equals(password)){
@@ -62,6 +67,7 @@ public class InternshipSystem {
                 return true;
             }
         }
+
         return false;
     }
 
@@ -142,7 +148,6 @@ public class InternshipSystem {
             }
     }
         resume = new Resume(skills, experiences, ed, languages);
-        // studentUser.getResume().getid() = resume.getid();
         resumes.addResume(resume);
     }
 
@@ -208,8 +213,13 @@ public class InternshipSystem {
             System.out.println("Input number next to the job listing to apply: ");
             int number = getUserInput();
             filteredInternships.get(number-1).addID(studentUser.getId());
+            System.out.println(studentUser.getId());
             internships.logout();
             }
+
+            System.out.println(studentUser);
+            System.out.println(" " + studentUser.getId());
+            String debugger = scanner.nextLine();
     }
 
     public void viewMyInternship(){
