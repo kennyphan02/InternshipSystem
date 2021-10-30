@@ -6,8 +6,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ * Hold operations for instances of Students
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class DataLoader extends DataConstants {
 
+    //Loads data from JSON file into array list
     public static ArrayList<Student> getStudents() {
         ArrayList<Student> students = new ArrayList<Student>();
         try {
@@ -46,6 +51,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Loads data from JSON file into array list
     public static ArrayList<Organization> getOrgs() {
         ArrayList<Organization> orgs = new ArrayList<Organization>();
         try {
@@ -82,6 +88,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Loads data from JSON file into array list
     public static ArrayList<Resume> getResumes() {
         ArrayList<Resume> resumes = new ArrayList<Resume>();
         try {
@@ -125,6 +132,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Loads data from JSON file into array list
     public static ArrayList<Internship> getInternships() {
         ArrayList<Internship> internships = new ArrayList<Internship>();
         try {
@@ -160,6 +168,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Loads data from JSON file into array list
     public static ArrayList<Review> getStudentReviews() {
         ArrayList<Review> studentReviews = new ArrayList<Review>();
         try {
@@ -185,6 +194,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Loads data from JSON file into array list
     public static ArrayList<Review> getInternshipReviews() {
         ArrayList<Review> internshipReviews = new ArrayList<Review>();
         try {
@@ -210,6 +220,7 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
+    //Takes in String type JSONArray objects into ArrayLists
     private static ArrayList<String> arrToListStr(JSONArray arr) {
         ArrayList<String> ret = new ArrayList<String>();
         for(int i = 0; i < arr.size(); i++) {
@@ -218,6 +229,7 @@ public class DataLoader extends DataConstants {
         return ret;
     }
 
+    //Takes in UUID type JSONArray objects into ArrayLists
     private static ArrayList<UUID> arrToListUUID(JSONArray arr) {
         ArrayList<UUID> ret = new ArrayList<UUID>();
         for(int i = 0; i < arr.size(); i++) {

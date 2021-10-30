@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+/**
+ * Hold operations for instances of Students
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class DataWriter extends DataConstants {
     
+    // 
     public static void saveStudents() {
 		Students students = Students.getInstance();
 		ArrayList<Student> studentList = students.getStudentsList();
