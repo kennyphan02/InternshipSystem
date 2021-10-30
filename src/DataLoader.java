@@ -74,7 +74,7 @@ public class DataLoader extends DataConstants {
                 Internships internshipsSingleton = Internships.getInstance();
                 ArrayList<Internship> internships = new ArrayList<Internship>();
                 for(int j = 0; j < internshipIDs.size(); j++) {
-                    internships.add(internshipsSingleton.getInternship(internshipIDs.get(i)));
+                    internships.add(internshipsSingleton.getInternship(internshipIDs.get(j)));
                 }
 
                 orgs.add(new Organization(id, user, pass, email, country, orgName, phoneNum, description, internships));
