@@ -29,7 +29,6 @@ public class InternshipUI {
                 displayMainMenu();
             }
             if(guestUser == 1){
-                internshipSystem.debugger();
                 guestInput = internshipSystem.getUserInput();
                 if(guestInput == 1){
                     // searchInternship();
@@ -39,9 +38,6 @@ public class InternshipUI {
                     createAccount();
                 } else if(guestInput == 4) {
                     break;
-                } else if(guestInput == 5){
-                    
-
                 } else{
                     try {
                         System.out.println("\nInvalid Option...");
