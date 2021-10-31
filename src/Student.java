@@ -65,67 +65,7 @@ public class Student extends User {
         this.reviewIDs = reviews;
     }
 
-    /**
-     * Determines if the conditions to the student's account password are met.
-     * @return True if the conditions are met.
-     */
-    public boolean passwordCondition() {
-        return false;
-    }
 
-    /**
-     * Bookmarks an internship for a student.
-     */
-    public void bookmarkInternship() {
-        return;
-    }
-
-    /**
-     * Removes a bookmark from the student's list.
-     */
-    public void removeBookmark() {
-        return;
-    }
-
-    /**
-     * Displays the bookmarks in the student's list.
-     */
-    public void displayBookmarks() {
-        return;
-    }
-
-    /**
-     * Creates an internship review.
-     * @param internship The internship that the user is reviewing.
-     * @param rate The rating that the user is giving.
-     * @param comment The comment that the user is leaving.
-     */
-    public void addInternshipReview(Internship internship, int rate, String comment) {
-        return;
-    }
-
-    /**
-     * Removes an internship review.
-     * @param internship The internship that the review is being removed from.
-     */
-    public void removeInternshipReview(Internship internship) {
-        return;
-    }
-
-    /**
-     * Creates an application for an internship.
-     * @param internship The internship that is being applied for.
-     */
-    public void applyInternship(Internship internship) {
-        return;
-    }
-
-    /**
-     * Creates a student profile.
-     */
-    public void createStudentProfile() {
-        return;
-    }
     /**
      * Gets the UUID for the student.
      * @return The UUID for the student.
