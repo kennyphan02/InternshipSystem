@@ -155,7 +155,7 @@ public class InternshipSystem {
         displayInternshipLine();
         try {
             System.out.println("\nPrinting resume to text file...");
-            TimeUnit.MILLISECONDS.sleep(10000); 
+            TimeUnit.MILLISECONDS.sleep(3000); 
             FileWriter file = new FileWriter(studentUser.getUser() + "Resume.txt");
             PrintWriter output = new PrintWriter(file);
             output.println(resume.toString());
