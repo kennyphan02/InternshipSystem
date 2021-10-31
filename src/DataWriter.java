@@ -20,6 +20,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< studentList.size(); i++) {
 			jsonStudents.add(getStudentJSON(studentList.get(i)));
+            jsonStudents.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
@@ -61,6 +62,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< orgList.size(); i++) {
 			jsonOrganizations.add(getOrganizationJSON(orgList.get(i)));
+            jsonOrganizations.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(ORG_FILE_NAME)) {
@@ -99,6 +101,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< internshipList.size(); i++) {
 			jsonInternships.add(getInternshipJSON(internshipList.get(i)));
+            jsonInternships.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(INTERNSHIP_FILE_NAME)) {
@@ -141,6 +144,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< resumeList.size(); i++) {
 			jsonResumes.add(getResumeJSON(resumeList.get(i)));
+            jsonResumes.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(RESUME_FILE_NAME)) {
@@ -175,6 +179,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< iReviewList.size(); i++) {
 			jsonIReviews.add(getInternshipReviewJSON(iReviewList.get(i)));
+            jsonIReviews.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(INTERNSHIP_REVIEW_FILE_NAME)) {
@@ -208,6 +213,7 @@ public class DataWriter extends DataConstants {
 		
 		for(int i=0; i< sReviewList.size(); i++) {
 			jsonSReviews.add(getStudentReviewJSON(sReviewList.get(i)));
+            jsonSReviews.add("\n");
 		}
 		
         try (FileWriter file = new FileWriter(STUDENT_REVIEW_FILE_NAME)) {
