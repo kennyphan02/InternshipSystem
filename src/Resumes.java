@@ -39,7 +39,7 @@ public class Resumes {
     }
 
     public void logout() {
-
+        DataWriter.saveResume();
     }
     
 }

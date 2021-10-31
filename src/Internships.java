@@ -23,7 +23,7 @@ public class Internships {
 
     public Internship getInternship(UUID target) {
         for (int i = 0; i < internshipsList.size(); i++) {
-            if(internshipsList.get(i).getid() == target) {
+            if(internshipsList.get(i).getid().equals(target)) {
                 return internshipsList.get(i);
             }
         }
@@ -39,7 +39,7 @@ public class Internships {
     }
 
     public void logout() {
-
+        DataWriter.saveInternship();
     }
     
 }

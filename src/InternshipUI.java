@@ -38,7 +38,7 @@ public class InternshipUI {
                     createAccount();
                 } else if(guestInput == 4) {
                     break;
-                } else {
+                } else{
                     try {
                         System.out.println("\nInvalid Option...");
                         TimeUnit.MILLISECONDS.sleep(1000); 
@@ -80,11 +80,12 @@ public class InternshipUI {
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
         System.out.println("1. Search Internship");
-        System.out.println("2. View bookmarks for internships");
-        System.out.println("3. View my student reviews");
-        System.out.println("4. Edit student profile");
-        System.out.println("5. Pending Internships");
-        System.out.println("6. Logout");
+        System.out.println("2. Add resume");
+        System.out.println("3. Print resume");
+        System.out.println("4. View my student reviews");
+        System.out.println("5. Edit student profile");
+        System.out.println("6. Pending Internships");
+        System.out.println("7. Logout");
         // System.out.println("Input 8 to display student's resume");
     }
 
@@ -95,7 +96,7 @@ public class InternshipUI {
         System.out.println("--------Internship System--------");
         System.out.println("Input a number based off the choices below");
         System.out.println("1. Search Internship");
-        System.out.println("2. View Internship");
+        System.out.println("2. View My Internship");
         System.out.println("3. View my student reviews");
         System.out.println("4. View my organization reviews");
         System.out.println("5. Edit organization profile");
@@ -107,12 +108,23 @@ public class InternshipUI {
      */
     private void inputStudentOptions(){
         studentInput = internshipSystem.getUserInput();
-        if(studentInput == 6){
+        if(studentInput == 1){
+            searchInternship();
+        }
+        else if(studentInput == 2){
+            addResume();
+        }
+        else if(studentInput == 3){
+            printResume();
+
+        } 
+        else if(studentInput == 7){
             logOff();
         }
-        else if(studentInput == 4){
+        else if(studentInput == 5){
             internshipSystem.editStudentProfile();
         }
+
         //debugging
         if(studentInput == 8){
             System.out.println(internshipSystem.getResume());
@@ -121,12 +133,30 @@ public class InternshipUI {
     }
     private void inputOrganizationOptions(){
         organizationInput = internshipSystem.getUserInput();
+        if(organizationInput == 2){
+            viewMyInternship();
+        }
+        if(organizationInput == 6){
+            logOff();
+        }
     }
+    private void addResume(){
+        clearConsole();
+        internshipSystem.addResume();
+
     
+    }
+    private void viewMyInternship(){
+        internshipSystem.viewMyInternship();
+    }
+    private void printResume(){
+        clearConsole();
+        internshipSystem.printResume();
+    }
     private void logOff(){
         try {
             System.out.println("\nLogging off...");
-            TimeUnit.MILLISECONDS.sleep(1000); 
+            TimeUnit.MILLISECONDS.sleep(300); 
             
         } catch (Exception e) {
             System.out.println("Error");
@@ -149,11 +179,39 @@ public class InternshipUI {
      * 
      */
     private void searchInternship(){
-        // internshipSystem.searchInternship();
+        internshipSystem.searchInternship();
     }
 
     private void login() {
-        internshipSystem.login();
+        clearConsole();
+        System.out.println("--------Internship System--------");
+        System.out.print("Input user: ");
+        String username = scanner.nextLine();
+        System.out.print("Input pass: ");
+        String password = scanner.nextLine();
+        if(internshipSystem.login(username, password)){
+            if(internshipSystem.getStudent() != null){
+                guestUser = 0;
+                studentUser = 1;
+            }
+            if(internshipSystem.getOrganization() != null){
+                guestUser = 0;
+                organizationUser = 1;
+            }
+            try {
+                System.out.println("\nLogging in...");
+                TimeUnit.MILLISECONDS.sleep(1000); 
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+        }
+        else
+        {
+            System.out.println("Invalid Username/Password!");
+        }
+
+        
+        
     }
 
     private void createAccount(){

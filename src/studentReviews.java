@@ -39,7 +39,7 @@ public class studentReviews {
     }
 
     public void logout() {
-
+        DataWriter.saveStudentReview();
     }
     
 }

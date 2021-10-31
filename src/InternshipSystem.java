@@ -1,12 +1,17 @@
 import java.util.Scanner;
+import java.util.UUID;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-import java.io.File;
-import java.io.IOException;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.File;
 
 public class InternshipSystem {
     private Internships internships;
+    private Students students;
+    private Organizations organizations;
+    private Resumes resumes;
     private Scanner scanner;
     private String username;
     private String password;
@@ -15,7 +20,6 @@ public class InternshipSystem {
     private String country;
     private String firstName;
     private String lastName;
-    private String profession;
     private String college;
     private String organization;
     private String phoneNum;
@@ -24,26 +28,226 @@ public class InternshipSystem {
     private Experience experience;
     private Education education;
     private Resume resume;
+    private Student studentUser;
+    private Organization organizationUser;
 
     public InternshipSystem(){
-        // internshipList = InternshipList.getInstance();
         // userList = UserList.getInstance();
+        internships = Internships.getInstance();
+        organizations = Organizations.getInstance();
+        students = Students.getInstance();
+        resumes = Resumes.getInstance();
         scanner = new Scanner(System.in);
-        experience = new Experience();
-        education = new Education();
+        // experience = new Experience();
+        // education = new Education();
         language = new ArrayList<String>();
     }
-    
-    public void login(){
-        clearConsole();
-        displayInternshipLine();
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.println("");
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+
+    public Student getStudent(){
+        return studentUser;
+    }
+    public Organization getOrganization(){
+        return organizationUser;
     }
 
+    public boolean login(String username, String password){
+        for(Student student : students.getStudentsList()) {
+            if(student.getUser().equals(username) && student.getPassword().equals(password)){
+                studentUser = students.getStudent(student.getId());
+                return true;
+            }
+        }
+        for(Organization organization : organizations.getOrganizationsList()) {
+            if(organization.getUser().equals(username) && organization.getPassword().equals(password)){
+                organizationUser = organizations.getOrganization(organization.getId());
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public void debug(){
+        System.out.println(organizationUser);
+        String debug = scanner.nextLine();
+    }
+
+    public void addResume(){
+        displayInternshipLine();
+        System.out.println("Add the following details to your resume: ");
+        System.out.println("Input q to stop at any time");
+        System.out.println("Skills:");
+        ArrayList<String> skills = new ArrayList<String>();
+        while(true){
+            String skill = scanner.nextLine();
+            if(skill.equals("q")){
+                break;
+            }
+            else
+            {
+                skills.add(skill);
+            }
+        }
+        System.out.println("");
+        System.out.println("Input education:\n");
+        System.out.print("College: ");
+        college = scanner.nextLine();
+        System.out.print("Degree: ");
+        String degree = scanner.nextLine();
+        System.out.print("Expected Graduation Date: ");
+        String gradDate = scanner.nextLine();
+        Education ed = new Education(college,degree,gradDate);
+
+        System.out.print("Input languages that you can speak. Press q at any time to quit\n");
+        ArrayList<String> languages = new ArrayList<String>();
+        while(true){
+            String language = scanner.nextLine();
+            if(language.equals("q")){
+                break;
+            }
+            else
+            {
+                languages.add(language);
+            }
+        }
+
+        ArrayList<Experience> experiences = new ArrayList<Experience>();
+
+        System.out.println("\nInput experience:\n");
+        while(true){
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
+            System.out.print("      Company: ");
+            String company = scanner.nextLine();
+            System.out.print("      Start date: ");
+            String startDate = scanner.nextLine();
+            System.out.print("      End date: ");
+            String endDate = scanner.nextLine();
+
+            ArrayList<String> descriptions = new ArrayList<String>();
+            System.out.println("\nInput descriptions for experiences. Press q at any time to quit\n");
+            while(true){
+                String description = scanner.nextLine();
+                if(description.equals("q")){
+                    break;
+                }
+                else
+                {
+                    descriptions.add(description);
+                }
+            }
+            Experience exp = new Experience(title, company, startDate, endDate, descriptions);
+            experiences.add(exp);
+            System.out.println("\n Add more experiences? input y to continue or n to stop\n");
+            String userCondition = scanner.nextLine();
+            if(userCondition.equals("y"))
+            {
+                continue;
+            }
+            if(userCondition.equals("n")){
+                break;
+            }
+    }
+        resume = new Resume(skills, experiences, ed, languages);
+        resumes.addResume(resume);
+    }
+
+    public void printResume(){
+        displayInternshipLine();
+        try {
+            System.out.println("\nPrinting resume to text file...");
+            TimeUnit.MILLISECONDS.sleep(3000); 
+            FileWriter file = new FileWriter(studentUser.getUser() + "Resume.txt");
+            PrintWriter output = new PrintWriter(file);
+            output.println(resume.toString());
+            output.close();
+            
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
+    }
+
+
+    public void searchInternship(){
+        System.out.println("Search by Filter. Input number next to filter to change it:\n");
+        System.out.println("1. Job: ");
+        System.out.println("2. Degree: ");
+        System.out.println("3. Full time or In Person: ");
+        System.out.println("4. Pay: ");
+        System.out.println("5. Hours: ");
+        System.out.println("6. Skills: ");
+        int filter = getUserInput();
+        if(filter == 6){
+            ArrayList<String> skills = new ArrayList<String>();
+            System.out.println("\n Input skills. Press q to stop at any point: \n");
+            while(true){
+                String skill = scanner.nextLine();
+                if(skill.equals("q")){
+                    break;
+                }
+                else
+                {
+                    skills.add(skill);
+                }
+            }
+            System.out.println("\n Job Postings that contain " + skills);
+            ArrayList<Internship> filteredInternships = new ArrayList<Internship>();
+            System.out.println("\n********************\n");
+            int counter = 0;
+
+            for(Internship internship : internships.getInternshipsList()){
+                for(int i = 0; i < internship.getSkills().size(); i++){
+                    if(internship.getSkills().get(i).equals(skills.get(counter))){
+                        filteredInternships.add(internships.getInternship(internship.getid()));
+                    }
+                }   
+            }
+
+            for(int i= 0; i < filteredInternships.size(); i++){
+                System.out.println(i+1 + ".");
+                System.out.println(filteredInternships.get(i));
+                System.out.println("\n");
+            }
+            
+
+
+            System.out.println("Input number next to the job listing to apply: ");
+            int number = getUserInput();
+            filteredInternships.get(number-1).addID(studentUser.getId());
+            internships.logout();
+            }
+    }
+
+    public void viewMyInternship(){
+        
+        if(organizationUser != null){
+            // 1st for loop (loops through each internship)
+            for(int i = 0; i < organizationUser.getInternships().size(); i++) {
+                Student applicant;
+                System.out.println(i+1 + ".");
+                System.out.println(organizationUser.getInternships().get(i));
+                System.out.println("Applicants: ");
+                // 2nd for loop iterates through every user id
+                for(int j = 0; j < organizationUser.getInternships().get(i).getapplicantIDs().size(); j++){
+                    for(Student student: students.getStudentsList()){
+                        // System.out.println("Student id: " + student.getId());
+                        // System.out.println("Applicant id: " + organizationUser.getInternships().get(i).getapplicantIDs().get(j));
+                        if(student.getId().equals(organizationUser.getInternships().get(i).getapplicantIDs().get(j))){
+                            applicant = students.getStudent(student.getId());
+                            System.out.println(applicant.getUser());
+                        }
+                    }
+                }
+                System.out.println("\n");
+            }
+            String debug = scanner.nextLine();
+
+
+        }
+
+    }
+
+
+    
     public void createStudentAccount(){
             clearConsole();
             displayInternshipLine();
@@ -192,12 +396,12 @@ public class InternshipSystem {
         System.out.println("First Name: " + firstName);
         System.out.println("Last name: " + lastName);
         System.out.print("Profession: ");
-        profession = scanner.nextLine();
+        // profession = scanner.nextLine();
         System.out.println("Email: " + email);
         System.out.println("");
         createExperiences();
         createEducation();
-        resume = new Resume(firstName, lastName, profession, email, experience, education, language);
+        // resume = new Resume(firstName, lastName, profession, email, experience, education, language);
     }
 
     private void createLanguages(){
@@ -225,10 +429,10 @@ public class InternshipSystem {
         while(count){
             System.out.print("Input title:  ");
             String title = scanner.nextLine();
-            experience.addTitle(title);
+            // experience.addTitle(title);
             System.out.print("Input description: ");
             String description = scanner.nextLine();
-            experience.addDescription(description);
+            // experience.addDescription(description);
             System.out.print("Input quit? type quit to quit or no to keep inputting experiences: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
@@ -247,10 +451,10 @@ public class InternshipSystem {
         while(count){
             System.out.print("Input degree:  ");
             String degree = scanner.nextLine();
-            education.addDegree(degree);
+            // education.addDegree(degree);
             System.out.print("Input description: ");
             String description = scanner.nextLine();
-            education.addDescription(description);
+            // education.addDescription(description);
             System.out.print("Input quit? type quit to quit or no to ke ep inputting education: ");
             String quit = scanner.nextLine();
             if(quit.equals("quit")){
@@ -299,8 +503,7 @@ public class InternshipSystem {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
         return false;
     }
- 
+
 }
