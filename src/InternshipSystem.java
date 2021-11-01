@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.File;
 
 public class InternshipSystem {
     private Internships internships;
@@ -30,6 +29,7 @@ public class InternshipSystem {
     private Resume resume;
     private Student studentUser;
     private Organization organizationUser;
+
 
     public InternshipSystem(){
         // userList = UserList.getInstance();
@@ -228,6 +228,8 @@ public class InternshipSystem {
                 System.out.println("Applicants: ");
                 // 2nd for loop iterates through every user id
                 for(int j = 0; j < organizationUser.getInternships().get(i).getapplicantIDs().size(); j++){
+                    // enhanced for loop that iterates through every student in the studentlist. checks each student's id
+                    // and compares it to the id of those in the applicants.
                     for(Student student: students.getStudentsList()){
                         // System.out.println("Student id: " + student.getId());
                         // System.out.println("Applicant id: " + organizationUser.getInternships().get(i).getapplicantIDs().get(j));
@@ -471,39 +473,10 @@ public class InternshipSystem {
         return userInput;
     }
 
-    public boolean writeResume(Student student, Resume resume) {
-        String fileName = student.getUser()+"Resume.txt";
-        try {
-            File file = new File(fileName);
-            if (file.createNewFile()) {
-                System.out.println("File created: "+file.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-       
-        try {
-            FileWriter writer = new FileWriter(fileName);
-            writer.write(student.getUser()+"\n"+student.getEmail()+"\n"+resume.geteducation()+"\n"+resume.getexperience());
-            for(int i=0; i<resume.getSkills().size(); i++) {
-                writer.write(resume.getSkills().get(i));
-            }
-            for(int i=0; i<resume.getlanguage().size(); i++) {
-                writer.write(resume.getlanguage().get(i));
-            }
-            for(int i=0; i<resume.getSkills().size(); i++) {
-                writer.write(resume.getexperience().get(i).toString());
-            }
-            writer.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-        return false;
-    }
 
+
+
+
+
+    
 }
