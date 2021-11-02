@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * Students and organizations extends the user class
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class User {
 /**
  * searches the internship array.
