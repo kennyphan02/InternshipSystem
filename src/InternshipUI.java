@@ -134,6 +134,11 @@ public class InternshipUI {
             System.exit(0);
         }
     }
+
+    /**
+     * Takes the organization input and prints out the internships that the students 
+     * have applied for. 
+     */
     private void inputOrganizationOptions(){
         organizationInput = internshipSystem.getUserInput();
         if(organizationInput == 2){
@@ -143,19 +148,35 @@ public class InternshipUI {
             logOff();
         }
     }
+
+    /**
+     * Adds resume to the internship system and clears the console. 
+     */
     private void addResume(){
         clearConsole();
         internshipSystem.addResume();
 
     
     }
+
+    /**
+     * Prints out the internships for the user to see. 
+     */
     private void viewMyInternship(){
         internshipSystem.viewMyInternship();
     }
+
+    /**
+     * Prints out the resume and clears the console. 
+     */
     private void printResume(){
         clearConsole();
         internshipSystem.printResume();
     }
+
+    /**
+     * Logs the user off the system. 
+     */
     private void logOff(){
         try {
             System.out.println("\nLogging off...");
