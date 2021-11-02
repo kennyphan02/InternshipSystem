@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 /**
- * Hold operations for instances of Students
+ * Hold operations for instances of student reviews
  * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
  */
 public class studentReviews {
