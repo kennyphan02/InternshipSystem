@@ -1,6 +1,10 @@
 import java.util.UUID;
 import java.util.ArrayList;
 
+/**
+ * Hold operations for instances of the Resumes. 
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class Resume {
 
     private UUID id;
@@ -80,9 +84,7 @@ public class Resume {
         return skills;
     }
 
-    /**
-     * Prints out.
-     */
+    //Prints out.
     public String toString() {
         String ret = "ID: " + id + "\n" + "Skills: " + skills.toString() + "\n" + "\n" + "Experience: " + "\n";
         for(int i = 0; i < experience.size(); i++) {
