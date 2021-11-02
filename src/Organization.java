@@ -85,9 +85,7 @@ public class Organization extends User{
         return;
     }
 
-    /**
-     * prints out all of the student information for the organization to see. 
-     */
+    //prints out all of the student information for the organization to see.
     public String toString() {
         return "User: " + this.user + "\nPass: " + this.pass + "\nEmail: " + this.email + "\nCountry: " + this.country + "\nOrgName: " + this.orgName + "\nPhoneNum: " + this.phoneNum + "\nDescription: " + this.description + "\nInternships: " + internships;
     }
