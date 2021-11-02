@@ -59,7 +59,7 @@ public class Organizations {
         organizationsList.remove(o);
     }
 
-    //Sends data from singletons to DataWriter.
+    //Sends data from this singleton to DataWriter.
     public void logout() {
         DataWriter.saveOrganization();
     }
