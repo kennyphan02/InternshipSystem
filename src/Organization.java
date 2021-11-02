@@ -1,6 +1,10 @@
 import java.util.UUID;
 import java.util.ArrayList;
 
+/**
+ * Holds all of the methods for the organization. also has all of the Strings for the Organizations data.
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ */
 public class Organization extends User{
 
     private UUID id;
