@@ -1,4 +1,9 @@
-
+/**
+ * Defines a series of protected static final Strings which are used by both DataLoader and DataWriter for file and JSON attribute access
+ * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
+ * @see DataLoader
+ * @see DataWriter
+ */
 public class DataConstants {
 
     protected static final String INTERNSHIP_FILE_NAME = "./src/data/internship.json";

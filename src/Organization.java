@@ -86,54 +86,54 @@ public class Organization extends User{
     }
 
     /**
-     * prints out. 
+     * prints out all of the student information for the organization to see. 
      */
     public String toString() {
         return "User: " + this.user + "\nPass: " + this.pass + "\nEmail: " + this.email + "\nCountry: " + this.country + "\nOrgName: " + this.orgName + "\nPhoneNum: " + this.phoneNum + "\nDescription: " + this.description + "\nInternships: " + internships;
     }
 
     /**
-     * Gets the UUID for the student.
-     * @return The UUID for the student.
+     * Gets the UUID for the organization.
+     * @return The UUID for the organization.
      */
     public UUID getId() {
         return id;
     }
 
     /**
-     * Gets the username of the student.
-     * @return The username of the student.
+     * Gets the username of the organization.
+     * @return The username of the organization.
      */
     public String getUser() {
         return user;
     }
 
     /**
-     * Gets the password of the student.
-     * @return The password of the student.
+     * Gets the password of the organization.
+     * @return The password of the organization.
      */
     public String getPassword() {
         return pass;
     }
 
     /**
-     * Gets the email of the student.
-     * @return The email of the student.
+     * Gets the email of the organization.
+     * @return The email of the organization.
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * Gets the country of the student. 
-     * @return the country of the student. 
+     * Gets the country of the organization. 
+     * @return the country of the organization. 
      */
     public String getCountry() {
         return country;
     }
 
     /**
-     * Gets the Org name of the student.
+     * Gets the Org name of the organization.
      * @return the org name. 
      */
     public String getOrgName() {
@@ -141,15 +141,15 @@ public class Organization extends User{
     }
 
     /**
-     * Gets the phone number of the student.
-     * @return the phone number of the student.
+     * Gets the phone number of the organization.
+     * @return the phone number of the organization.
      */
     public String getPhoneNumber() {
         return phoneNum;
     }
 
     /**
-     * Gets the description of the student. 
+     * Gets the description of the organization.
      * @return the description.
      */
     public String getDesc() {
@@ -157,7 +157,7 @@ public class Organization extends User{
     }
 
     /**
-     * Gets the internships that the student has. 
+     * Gets the internships that the organization has.  
      * @return the internships. 
      */
     public ArrayList<Internship> getInternships() {
