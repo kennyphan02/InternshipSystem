@@ -70,6 +70,9 @@ public class InternshipSystem {
         System.out.println(organizationUser);
         String debug = scanner.nextLine();
     }
+    /**
+     * Takes in user input for multiple fields within a resume.
+     */
 
     public void addResume(){
         displayInternshipLine();
@@ -150,10 +153,13 @@ public class InternshipSystem {
         resume = new Resume(skills, experiences, ed, languages);
         resumes.addResume(resume);
     }
-
+    /**
+     * Prints the user's resume to a txt file
+     */
     public void printResume(){
         displayInternshipLine();
         try {
+
             System.out.println("\nPrinting resume to text file...");
             TimeUnit.MILLISECONDS.sleep(3000); 
             FileWriter file = new FileWriter(studentUser.getUser() + "Resume.txt");
@@ -165,8 +171,10 @@ public class InternshipSystem {
             System.out.println("Error");
         }
     }
-
-
+    /**
+     * Displays a list of filters that users can choose from by inputting a number. Compares the user inputs to the attributes of each
+     * internship. If the comparison is similar, the internship will be displayed upon searching. 
+     */
     public void searchInternship(){
         System.out.println("Search by Filter. Input number next to filter to change it:\n");
         System.out.println("1. Job: ");
@@ -217,6 +225,10 @@ public class InternshipSystem {
             }
     }
 
+    /**
+     * displays the organization's internships including applicants that have applied for them.
+     */
+
     public void viewMyInternship(){
         
         if(organizationUser != null){
@@ -249,7 +261,9 @@ public class InternshipSystem {
     }
 
 
-    
+    /** 
+     * creates a student account with multiple attributes that the user inputs
+     */
     public void createStudentAccount(){
             clearConsole();
             displayInternshipLine();
@@ -270,6 +284,10 @@ public class InternshipSystem {
            Student student = new Student(username, password, email, birthday, country, resume, college, language);
 
     }
+
+    /**
+     * creates a organization account with multiple attributes that the user inputs.
+     */
     public void createOrganizationAccount(){
         clearConsole();
         displayInternshipLine();
@@ -288,6 +306,10 @@ public class InternshipSystem {
         Organization org = new Organization(username, password, email, country, organization, phoneNum, description);
     }
 
+    /** 
+     * creates an organization profile that is displayed to students
+     */
+
     private void createOrganizationProfile(){
         System.out.println("Create your organization profile that will be displayed to organizations: ");
         System.out.println("");
@@ -299,6 +321,9 @@ public class InternshipSystem {
         description = scanner.nextLine();
     }
 
+    /**
+     * Students are able to edit their student profile that is displayed to organizations
+     */
     public void editStudentProfile(){
         clearConsole();
         while(true){
@@ -364,17 +389,32 @@ public class InternshipSystem {
         }
     }
 
+    /**
+     * Returns the resume 
+     * @return
+     */
     public Resume getResume(){
         return resume;
     }
 
+    /**
+     * clears the console
+     */
     private void clearConsole(){
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
+
+    /**
+     * Displays the main UI line
+     */
     private void displayInternshipLine(){
         System.out.println("--------Internship System--------");
     }
+
+    /**
+     * Creates a student profile that the user inputs.
+     */
 
     private void createStudentProfile(){
         System.out.println("Create your student profile that will be displayed to organizations: ");
@@ -391,21 +431,24 @@ public class InternshipSystem {
         System.out.println("");
     }
 
-
+    /**
+     * Creates a resume that the user inputs
+     */
     private void createResume(){
         System.out.println("Add the following details to your resume:");
         System.out.println("");
         System.out.println("First Name: " + firstName);
         System.out.println("Last name: " + lastName);
         System.out.print("Profession: ");
-        // profession = scanner.nextLine();
         System.out.println("Email: " + email);
         System.out.println("");
         createExperiences();
         createEducation();
-        // resume = new Resume(firstName, lastName, profession, email, experience, education, language);
     }
 
+    /**
+     * Creates languages that the user inputs
+     */
     private void createLanguages(){
         System.out.println("Input languages that you speak. Enter \"quit\" before adding an languages to quit");
         System.out.println("");
@@ -424,6 +467,9 @@ public class InternshipSystem {
         }
     }
 
+    /**
+     * Creates experiences that the user inputs
+     */
     private void createExperiences(){
         System.out.println("Input experience. Enter \"quit\" before adding an experience to quit");
         System.out.println("");
@@ -445,6 +491,9 @@ public class InternshipSystem {
         }
     }
 
+    /**
+     * Creates a list of education that the user inputs
+     */
     private void createEducation(){
         System.out.println("");
         System.out.println("Input education. Enter \"quit\" before adding an education to quit");
@@ -466,6 +515,11 @@ public class InternshipSystem {
             }
         }
     }
+
+    /**
+     * Gets user input as a string and converts it to int
+     * @return type int
+     */
 
     public int getUserInput(){
         String input = scanner.nextLine();
