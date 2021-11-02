@@ -7,12 +7,14 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /**
- * Hold operations for instances of Students
+ * Accesses the program's various data singletons and unloads their contents for storage as JSON files
  * @author Maru-Chan: KennyPhan, JacobSuhs, DanaiAngelidis, DanielNguyen, ThomasVu
  */
 public class DataWriter extends DataConstants {
     
-    // 
+    /**
+     * Accesses the Students Singleton and writes each Student object found within as a JSON entry in student.JSON
+     */
     public static void saveStudents() {
 		Students students = Students.getInstance();
 		ArrayList<Student> studentList = students.getStudentsList();
@@ -33,6 +35,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts a Student object to a JSONObject for usage by the companion saveStudents() method
+     * @param student the Student object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Student object's attributes
+     * @see DataWriter#saveStudents()
+     */
 	public static JSONObject getStudentJSON(Student student) {
 		JSONObject studentDetails = new JSONObject();
 		studentDetails.put(STUDENT_UUID, student.getId().toString());
@@ -52,9 +60,8 @@ public class DataWriter extends DataConstants {
 	}
 
     /**
-     * 
+     * Accesses the Organizations Singleton and writes each Organization object within as a JSON entry in org.JSON
      */
-
     public static void saveOrganization() {
 		Organizations organizations = Organizations.getInstance();
 		ArrayList<Organization> orgList = organizations.getOrganizationsList();
@@ -74,6 +81,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts an Organization object to a JSONObject for usage by the companion saveOrganization() method
+     * @param organization the Organization object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Organization's attributes
+     * @see DataWriter#saveOrganization()
+     */
 	public static JSONObject getOrganizationJSON(Organization organization) {
 		JSONObject orgDetails = new JSONObject();
 		orgDetails.put(ORG_UUID, organization.getId().toString());
@@ -90,9 +103,8 @@ public class DataWriter extends DataConstants {
 	}
 
     /**
-     * 
+     * Accesses the Internships Singleton and writes each Internship object within as a JSON entry in internship.JSON
      */
-    
     public static void saveInternship() {
 		Internships internships = Internships.getInstance();
 		ArrayList<Internship> internshipList = internships.getInternshipsList();
@@ -112,6 +124,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts a Internship object to a JSONObject for usage by the companion saveOrganization() method
+     * @param organization the Organization object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Organization's attributes
+     * @see DataWriter#saveOrganization()
+     */
 	public static JSONObject getInternshipJSON(Internship internship) {
 		JSONObject internshipDetails = new JSONObject();
 		internshipDetails.put(INTERNSHIP_UUID, internship.getid().toString());
@@ -132,9 +150,8 @@ public class DataWriter extends DataConstants {
 	}
 
     /**
-     * 
+     * Accesses the Resumes Singleton and writes each Resume object within as a JSON entry in Resume.JSON
      */
-    
     public static void saveResume() {
 		Resumes resumes = Resumes.getInstance();
 		ArrayList<Resume> resumeList = resumes.getResumesList();
@@ -154,6 +171,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts an Resume object to a JSONObject for usage by the companion saveResume() method
+     * @param Resume the Resume object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Resume's attributes
+     * @see DataWriter#saveResume()
+     */
 	public static JSONObject getResumeJSON(Resume resume) {
 		JSONObject resumeDetails = new JSONObject();
 		resumeDetails.put(RESUME_UUID, resume.getid().toString());
@@ -166,9 +189,8 @@ public class DataWriter extends DataConstants {
 	}
 
     /**
-     * 
+     * Accesses the internshipReviews Singleton and writes each Review object within as a JSON entry in internshipReviews.JSON
      */
-
     public static void saveInternshipReview() {
 		internshipReviews iReviews = internshipReviews.getInstance();
 		ArrayList<Review> iReviewList = iReviews.getinternshipReviewsList();
@@ -188,6 +210,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts a Review object to a JSONObject for usage by the companion saveInternshipReview() method
+     * @param review the Review object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Review's attributes
+     * @see DataWriter#saveInternshipReview()
+     */
 	public static JSONObject getInternshipReviewJSON(Review review) {
 		JSONObject iReviewDetails = new JSONObject();
 		iReviewDetails.put(REVIEW_UUID, review.getId().toString());
@@ -199,9 +227,8 @@ public class DataWriter extends DataConstants {
 	}
     
     /**
-     * 
+     * Accesses the studentReviews Singleton and writes each Review object within as a JSON entry in studentReviews.JSON
      */
-
     public static void saveStudentReview() {
 		studentReviews sReviews = studentReviews.getInstance();
 		ArrayList<Review> sReviewList = sReviews.getstudentReviewsList();
@@ -221,6 +248,12 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * Converts a Review object to a JSONObject for usage by the companion saveStudentReview() method
+     * @param review the Review object to be converted to a JSONObject
+     * @return the finished JSONObject possessing all of the passed Review's attributes
+     * @see DataWriter#saveStudentReview()
+     */
 	public static JSONObject getStudentReviewJSON(Review review) {
 		JSONObject sReviewDetails = new JSONObject();
 		sReviewDetails.put(REVIEW_UUID, review.getId().toString());
@@ -231,6 +264,11 @@ public class DataWriter extends DataConstants {
         return sReviewDetails;
 	}
     
+    /**
+     * Converts an ArrayList of UUID objects to an ArrayList of Strings for usage in writing to JSON Files
+     * @param arr an ArrayList of UUID objects to be converted
+     * @return an ArrayList of Strings representing the UUIDs from the passed ArrayList
+     */
     private static ArrayList<String> UUIDArrtoStrArr(ArrayList<UUID> arr) {
         ArrayList<String> ret = new ArrayList<String>();
         for(int i = 0; i < arr.size(); i++) {
