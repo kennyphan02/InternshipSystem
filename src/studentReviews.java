@@ -36,7 +36,7 @@ public class studentReviews {
     }
 
     /**
-     * Gets an instance of review from array list.
+     * Gets an instance of student review from array list.
      * @param target
      * @return selected review
      */
@@ -59,7 +59,7 @@ public class studentReviews {
         studentReviewsList.remove(r);
     }
 
-    //Sends data from review singleton to DataWriter.
+    //Sends data from this singleton to DataWriter.
     public void logout() {
         DataWriter.saveStudentReview();
     }
