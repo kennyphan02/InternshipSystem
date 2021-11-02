@@ -21,7 +21,10 @@ public class InternshipUI {
     }
 
     /**
-     * Runs 
+     * Runs the main UI system and waits for user to input a certain number. The program will
+     * first print the main menu and then wait for the user to input any inputs. If the input 
+     * matches the numbers the system would then call the next method and move on. If the number
+     * does not match a output the system will print out an error message. 
      */
     public void run() {
         while(true){
@@ -62,7 +65,7 @@ public class InternshipUI {
     }
     
     /**
-     * Prints out main menu. 
+     * Prints out main menu for the user to see what number to input. 
      */
     private void displayMainMenu()  {
         System.out.println("--------Internship System--------");
@@ -74,7 +77,7 @@ public class InternshipUI {
     }
 
     /**
-     * Prints out student menu. 
+     * Prints out student menu for the user to see what number to input. 
      */
     private void displayStudentMenu(){
         System.out.println("--------Internship System--------");
@@ -90,7 +93,7 @@ public class InternshipUI {
     }
 
     /**
-     * Prints out organization menu. 
+     * Prints out organization menu for the organization to see what number to input. 
      */
     private void displayOrganizationMenu(){
         System.out.println("--------Internship System--------");
@@ -104,7 +107,7 @@ public class InternshipUI {
     }
 
     /**
-     * 
+     * Takes the student input and calls the method. 
      */
     private void inputStudentOptions(){
         studentInput = internshipSystem.getUserInput();
@@ -168,7 +171,7 @@ public class InternshipUI {
     }
 
     /**
-     * Clears console. 
+     * Clears the console. 
      */
     private void clearConsole(){
         System.out.print("\033[H\033[2J");
@@ -176,12 +179,16 @@ public class InternshipUI {
     }
 
     /**
-     * 
+     * Calls the searchInternship method. 
      */
     private void searchInternship(){
         internshipSystem.searchInternship();
     }
 
+    /**
+     * Login method that takes in the users username and password. It then checks to see if 
+     * the username and password matches and prints out the next menu. 
+     */
     private void login() {
         clearConsole();
         System.out.println("--------Internship System--------");
@@ -214,6 +221,10 @@ public class InternshipUI {
         
     }
 
+    /**
+     * Method that creates an account for a student or organization. It takes the user input 
+     * and calls in the next method to create a student or organization account. 
+     */
     private void createAccount(){
         clearConsole();
         System.out.println("--------Internship System--------");
