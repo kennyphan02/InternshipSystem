@@ -59,7 +59,7 @@ public class Students {
         studentsList.remove(s);
     }
 
-    //Sends data from singletons to DataWriter.
+    //Sends data from student singleton to DataWriter.
     public void logout() {
         DataWriter.saveStudents();
     }
