@@ -59,7 +59,7 @@ public class Resumes {
         resumesList.remove(r);
     }
 
-    //Sends data from resume singleton to DataWriter.
+    //Sends data from this singleton to DataWriter.
     public void logout() {
         DataWriter.saveResume();
     }
