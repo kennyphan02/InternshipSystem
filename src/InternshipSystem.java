@@ -259,6 +259,19 @@ public class InternshipSystem {
         }
 
     }
+    public Student getStudentUser(){
+        return studentUser;
+    }
+
+    public boolean createStudentAccount(String username, String password, String email, String birthday, String country, Resume resume, String college, ArrayList<String> language ){
+        for(Student student : students.getStudentsList()){
+            if(student.getUser().equals(username)){
+                return false;
+            }
+        }
+        students.addStudent(new Student(username, password, email, birthday, country, resume, college, language));
+        return true;
+    }
 
 
     /** 
