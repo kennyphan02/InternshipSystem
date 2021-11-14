@@ -262,7 +262,13 @@ public class InternshipSystem {
     public Student getStudentUser(){
         return studentUser;
     }
+    public Organization getOrganizationUser(){
+        return organizationUser;
+    }
 
+    /** 
+     * creates a student account with multiple attributes that the user inputs
+     */
     public boolean createStudentAccount(String username, String password, String email, String birthday, String country, Resume resume, String college, ArrayList<String> language ){
         for(Student student : students.getStudentsList()){
             if(student.getUser().equals(username)){
@@ -273,29 +279,14 @@ public class InternshipSystem {
         return true;
     }
 
-
-    /** 
-     * creates a student account with multiple attributes that the user inputs
-     */
-    public void createStudentAccount(){
-            clearConsole();
-            displayInternshipLine();
-            System.out.print("Input username: ");
-            username = scanner.nextLine();
-            System.out.print("Input password: ");
-            password = scanner.nextLine();
-            System.out.print("Input email: ");
-            email = scanner.nextLine();
-            System.out.print("Input birthday: ");
-            birthday = scanner.nextLine();
-            System.out.print("Input country: ");
-            country = scanner.nextLine();
-            createLanguages();
-            System.out.println("");
-            createStudentProfile();
-            createResume();  
-           Student student = new Student(username, password, email, birthday, country, resume, college, language);
-
+    public boolean createOrganizationAccount(String username, String password, String email, String country, String orgName, String phoneNum, String description){
+        for(Organization organization : organizations.getOrganizationsList()){
+            if(organization.getOrgName().equals(username)){
+                return false;
+            }
+        }
+        organizations.addOrganization(new Organization(username, password, email, country, orgName, phoneNum, description));
+        return true;
     }
 
     /**
