@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "UUID":"806c9221-a08e-400a-8d9d-8e1ba03a6be5",
+        "user": "Microsoft",
+        "pass": "BillGates<3",
+        "email": "microsoft@microsoft.com",
+        "country": "USA",
+        "orgName": "Microsoft",
+        "phoneNum": "1-800-555-2984",
+        "description": "The world leader in software development excellence.",
+        "internships": ["a33421b9-e82a-465c-8aa5-a85b8de7db24"]
+    },{
+        "UUID":"b7a87285-44b9-4ac3-b6b0-0e616feb96fd",
+        "user": "Amazon",
+        "pass": "Bezosmademedoit87",
+        "email": "amazon@hotmail.com",
+        "country": "USA",
+        "orgName": "Amazon",
+        "phoneNum": "1-800-666-2049",
+        "description": "Worldwide E-Commerce Leader.",
+        "internships": ["3d523283-a353-41ae-b702-488cfb6917d5", "230d04f2-389b-484b-bb64-db73b08b398a"]
+    }
+] 
