@@ -239,7 +239,7 @@ public class InternshipUI {
         if(input == 1){
             studentUser = 1;
             guestUser = 0;
-            internshipSystem.createStudentAccount();
+            //internshipSystem.createStudentAccount();
         }
         else if(input == 2){
             organizationUser = 1;
