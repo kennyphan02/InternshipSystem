@@ -1,1 +1,28 @@
-[]
+[
+    {
+        "UUID": "e413a400-4cf4-48ab-baaf-b2cf77535b87",
+        "title": "Worst Intern Ever",
+        "comment": "Showed up late, never filled quotas, had an attitude.",
+        "rating": 1
+    },{
+        "UUID": "4aceebbe-e353-43de-9b79-7b6cf44ab63e",
+        "title": "Best Intern Ever",
+        "comment": "Would work with her again any time.",
+        "rating": 7
+    },{
+        "UUID": "54f1c5a4-fd44-409f-83a4-dd086ec1f608",
+        "title": "Great Intern",
+        "comment": "Very efficient, would gladly offer him a full-time position after college",
+        "rating": 8
+    },{
+        "UUID": "2fb1e662-44b4-4961-bf66-c1e2ced104dd",
+        "title": "Meh",
+        "comment": "Could be worse, could be better.",
+        "rating": 5
+    },{
+        "UUID": "54167f8e-2246-40fb-b5ae-7f52aa0fc89f",
+        "title": "Amazing Intern",
+        "comment": "Exceeded every expectation, best programmer of his time",
+        "rating": 10
+    }
+]
